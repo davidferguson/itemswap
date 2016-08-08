@@ -1,5 +1,87 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
+}
+#search {
+	border-radius:20px;
+}
+#mainContent {
+	text-align:center;
+	font-size:400%;
+	background-color:#888888;
+	padding-bottom:15%;
+	padding-top:15%;
+}
+#initSearch {
+	border-radius:20px;
+}
+#container {
+	width:1000px;
+	overflow:hidden;
+	margin: 50px auto;
+	background: white;
+}
+.photobanner {
+ height: 233px;
+ width: 3550px;
+ margin-bottom: 80px;
+}
+.first {
+	background-size:150px;
+ -webkit-animation: bannermove 15s linear infinite;
+    -moz-animation: bannermove 15s linear infinite;
+     -ms-animation: bannermove 15s linear infinite;
+      -o-animation: bannermove 15s linear infinite;
+         animation: bannermove 15s linear infinite;
+}
+@keyframes "bannermove" {
+	0% {
+		margin-left:0px;
+	}
+	100% {
+	  margin-left:2125px;
+	}
+}
+@-moz-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+ 
+}
+ 
+@-webkit-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+ 
+}
+ 
+@-ms-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+ 
+}
+ 
+@-o-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+ 
+}
+.img {
+	background-size:50px;
 }
