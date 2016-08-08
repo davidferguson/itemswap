@@ -28,7 +28,7 @@ body {
  margin-bottom: 80px;
 }
 .first {
-	background-size:150px;
+	width:355px;
  -webkit-animation: bannermove 15s linear infinite;
     -moz-animation: bannermove 15s linear infinite;
      -ms-animation: bannermove 15s linear infinite;
@@ -83,5 +83,5 @@ body {
  
 }
 .img {
-	background-size:50px;
+	width:355px;
 }
