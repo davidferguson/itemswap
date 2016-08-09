@@ -117,6 +117,15 @@ input:focus {
 #meMail:invalid {
 	background-color:pink;
 }
+#meName:invalid {
+	background-color:pink;
+}
+#mePass:invalid {
+	background-color:pink;
+}
+#mePass2:invalid {
+	background-color:pink;
+}
 .userSign {
 	border-radius:100px;
 	width:300px;
