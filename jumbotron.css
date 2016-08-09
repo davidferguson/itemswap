@@ -4,6 +4,9 @@ body {
   /*padding-bottom: 20px;*/
   background: url("hexagonal_background.png");
 }
+input:focus {
+    border: 4px solid purple;
+}
 #search {
 	border-radius:20px;
 }
@@ -11,7 +14,7 @@ body {
 	text-align:center;
 	font-size:400%;
 	background-color:#888888;
-	padding-bottom:15%;
+	padding-bottom:10%;
 	padding-top:15%;
 	border-bottom-left-radius:50px;
 	border-bottom-right-radius:50px; 
@@ -99,5 +102,32 @@ body {
 .img {
 	width:350px;
 }
-
-
+/*end of main Page*/
+/*=========================================================================================================*/
+#mainContent2 {
+	text-align:center;
+	font-size:130%;
+	background-color:#888888;
+	padding-bottom:20%;
+	padding-top:15%;
+	border-bottom-left-radius:50px;
+	border-bottom-right-radius:50px;
+	margin:auto;
+}
+#meMail:invalid {
+	background-color:pink;
+}
+.userSign {
+	border-radius:100px;
+	width:300px;
+	transition:border-radius 0.5s;
+	transition:width 0.5s;
+	display:inline;
+}
+.signLab {
+	display:block;
+}
+.userSign:focus {
+	border-radius:0px;
+	width:400px;
+}
