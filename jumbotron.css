@@ -2,7 +2,7 @@
 body {
   padding-top: 50px;
   /*padding-bottom: 20px;*/
-  background-color:blue;
+  background: url("hexagonal_background.png");
 }
 #search {
 	border-radius:20px;
@@ -13,6 +13,8 @@ body {
 	background-color:#888888;
 	padding-bottom:15%;
 	padding-top:15%;
+	border-bottom-left-radius:50px;
+	border-bottom-right-radius:50px; 
 }
 #initSearch {
 	border-radius:20px;
@@ -23,6 +25,16 @@ body {
 	margin: 50px auto;
 	background: white;
 	border-radius:100px;
+}
+#mainTitle {
+	display:inline;
+}
+#mainLogo {
+	width:75px;
+	display:inline;
+}
+#logo {
+	display:inline;
 }
 .photobanner {
  height: 233px;
@@ -87,3 +99,5 @@ body {
 .img {
 	width:350px;
 }
+
+
