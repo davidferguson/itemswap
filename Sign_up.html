@@ -50,15 +50,17 @@
     <!-- Main area -->
     <div id="mainContent2">
       <div class="container">
-        <label class="signLab" for="meMail">Enter your Email:</label>
-        <input class="userSign" id="meMail" type="email"/>
-        <label class="signLab" for="meName">Enter your Username:</label>
-        <input class="userSign" id="meName" type="text"/>
-        <label class="signLab" for="mePass">Enter your Password:</label>
-        <input class="userSign" id="mePass" type="password"/>
-        <label class="signLab" for="mePass2">Confirm your Password:</label>
-        <input class="userSign" id="mePass2" type="password"/>
-        <input class="userSign2" type="submit"/>
+        <form action="sign up.php" method="post">
+          <label class="signLab" for="meMail">Enter your Email:</label>
+          <input class="userSign" id="meMail" type="email" required/>
+          <label class="signLab" for="meName">Enter your Username:</label>
+          <input class="userSign" id="meName" type="text" required/>
+          <label class="signLab" for="mePass">Enter your Password:</label>
+          <input class="userSign" id="mePass" type="password" required/>
+          <label class="signLab" for="mePass2">Confirm your Password:</label>
+          <input class="userSign" id="mePass2" type="password" required/>
+          <input class="userSign2" type="submit"/>
+        </form>
       </div>
     </div>
 
