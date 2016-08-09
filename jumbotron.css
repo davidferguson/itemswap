@@ -145,3 +145,51 @@ input:focus {
     margin:auto;
     margin-top:10px;
 }
+/*end of sign in*/
+/*=========================================================================================================*/
+#mainContent3 {
+	text-align:center;
+	font-size:130%;
+	background-color:#888888;
+	height:900px;
+	border-bottom-left-radius:50px;
+	border-bottom-right-radius:50px;
+	margin:auto;
+}
+#lwall {
+	height:100%;
+	width:100px;
+	float:left;
+	background-color:#222222;
+	border-bottom-left-radius:50px;
+}
+#rwall {
+	height:100%;
+	width:100px;
+	float:right;
+	background-color:#222222;
+	border-bottom-right-radius:50px;
+}
+.searchedImg {
+	width:10%;
+	display:inline;
+	float:left;
+	border-radius:25px;
+}
+.searchedWord {
+	display:inline;
+}
+.searchedDesc {
+	display:block;
+}
+.searchedLoc {
+	display:block;
+}
+.searchedItem {
+	background-color:#5f6cf3;
+	height:150px;
+	border-left:inherit;
+	border-right:inherit;
+	border-radius:25px;
+	border:2px #2ef3ca dashed;
+}
