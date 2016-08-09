@@ -131,3 +131,8 @@ input:focus {
 	border-radius:0px;
 	width:400px;
 }
+.userSign2 {
+    display:block;
+    margin:auto;
+    margin-top:10px;
+}
