@@ -79,7 +79,7 @@
       else
         document.getElementById("mePass2").setCustomValidity('');  
       //empty string means no validation error
-      if (!checkPassword("mePass")) {
+      if (!checkPassword(pass1)) {
         document.getElementById("mePass").setCustomValidity("Password does not meet criteria");
       }
       else {
