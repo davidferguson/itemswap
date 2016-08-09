@@ -68,8 +68,10 @@
     window.onload = function () {
       document.getElementById("mePass").onchange = validatePassword;
       document.getElementById("mePass2").onchange = validatePassword;
+      /*document.getElementById("mePass").onchange = validatePassword2;
+      document.getElementById("mePass2").onchange = validatePassword2;*/
     }
-    function validatePassword(){
+    function validatePassword() {
       var pass2=document.getElementById("mePass2").value;
       var pass1=document.getElementById("mePass").value;
       if(pass1!=pass2)
@@ -77,8 +79,19 @@
       else
         document.getElementById("mePass2").setCustomValidity('');  
       //empty string means no validation error
+      if (!checkPassword("mePass")) {
+        document.getElementById("mePass").setCustomValidity("Password does not meet criteria");
+      }
+      else {
+        document.getElementById("mePass").setCustomValidity("");
+      }
     }
-</script>
+
+    function checkPassword(str) {
+      var re = /^.{6,}$/;
+      return re.test(str);
+    }
+    </script>
 
 
     <!-- Placed at the end of the document so the pages load faster -->
