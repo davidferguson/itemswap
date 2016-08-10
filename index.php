@@ -41,29 +41,31 @@
                     session_start();
                     if( !isset($_SESSION["username"] ) ) {
                 ?>
-                        <form class="navbar-form navbar-right" action="Login.php" method="post">
-                            <div class="form-group">
-                                <input type="text" placeholder="Username" class="form-control" name="username">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" placeholder="Password" class="form-control" name="password">
-                            </div>
-                            <button type="submit" class="btn btn-success">Sign in</button>
-                            <a href="Sign_up.html" class="btn btn-info" role="button">Sign up</a>
-                        </form>
-                    <?php
-                        } else {
-                    ?>
-                        <div class="navbar-right">
-                            <a href="settings.php">
-                                <div id="logo"><img src="ntfr-settingssymbol.png" id="setLogo" /></div>
-                            </a>
-                            <span class="navbar-brand" href="index.php" id="mainTitle">Welcome <?php echo $_SESSION["username"]; ?></span>
-                            <a href="Sign_Out.php" class="btn btn-info" role="button" style="margin-top:8px;">Sign Out</a>
+                    <!-- if the session is not set (and therefore no user is logged in), show the login form -->
+                    <form class="navbar-form navbar-right" action="Login.php" method="post">
+                        <div class="form-group">
+                            <input type="text" placeholder="Username" class="form-control" name="username">
                         </div>
-                    <?php
-                        }
-                    ?>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" class="form-control" name="password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Sign in</button>
+                        <a href="Sign_up.html" class="btn btn-info" role="button">Sign up</a>
+                    </form>
+                <?php
+                    } else {
+                ?>
+                    <!-- if the session is set (and therefore a user is logged in), show the logout form -->
+                    <div class="navbar-right">
+                        <a href="settings.php">
+                            <div id="logo"><img src="ntfr-settingssymbol.png" id="setLogo" /></div>
+                        </a>
+                        <span class="navbar-brand" href="index.php" id="mainTitle">Welcome <?php echo $_SESSION["username"]; ?></span>
+                        <a href="Sign_Out.php" class="btn btn-info" role="button" style="margin-top:8px;">Sign Out</a>
+                    </div>
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </nav>
