@@ -17,14 +17,21 @@ $password = mysqli_real_escape_string($conn, $_POST["password"]);
 
 
 $sql = "SELECT * FROM `users` where username = '".$username."' and password = '".$password."'";
-/*
-if ($conn->query($sql) === TRUE) {
-    header("Location: /");
+$result = mysqli_query($conn, $sql);
+if( $result ) {
+	$rowcount = mysqli_num_rows( $result );
+	if ( $rowcount != 0 ) {
+		echo "logged in";
+		session_start();
+		$_SESSION["username"]= $username;
+		header("Location: /");
+	} else {
+		echo "not logged in";
+	}
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+	echo "error";
 }
-*/
-echo $sql;
 $conn->close();
+
 
 ?>
