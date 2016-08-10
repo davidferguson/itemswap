@@ -51,9 +51,10 @@
 		  <?php
 		} else {
 			?>
-			 <a class="navbar-brand" href="index.html" id="mainTitle">Welcome <?php echo $SESSION_username; ?></a>
-            <a href="Sign_Out.php" class="btn btn-info" role="button">Sign Out</a>
-      
+			<div class="navbar-right">
+			 <span class="navbar-brand" href="index.html" id="mainTitle">Welcome <?php echo $_SESSION["username"]; ?></span>
+            <a href="Sign_Out.php" class="btn btn-info" role="button" style="margin-top:8px;">Sign Out</a>
+			</div>
 			<?php
 		}
 		  ?>
