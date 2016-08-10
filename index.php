@@ -52,7 +52,7 @@
 		} else {
 			?>
 			<div class="navbar-right">
-        <a href = "index.php"><div id="logo"><img src="ntfr-logo.png" id="setLogo"/></div></a>
+        <a href = "index.php"><div id="logo"><img src="ntfr-settingssymbol.png" id="setLogo"/></div></a>
 			 <span class="navbar-brand" href="index.html" id="mainTitle">Welcome <?php echo $_SESSION["username"]; ?></span>
             <a href="Sign_Out.php" class="btn btn-info" role="button" style="margin-top:8px;">Sign Out</a>
 			</div>
