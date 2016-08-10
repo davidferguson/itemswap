@@ -22,6 +22,9 @@ if( $result ) {
 	$rowcount = mysqli_num_rows( $result );
 	if ( $rowcount != 0 ) {
 		echo "logged in";
+		session_start();
+		$_SESSION["username"]= $username;
+		header("Location: /");
 	} else {
 		echo "not logged in";
 	}
