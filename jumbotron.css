@@ -2,7 +2,7 @@
 body {
   padding-top: 50px;
   /*padding-bottom: 20px;*/
-  background: url("hexagonal_background.png");
+  background: url("concrete_seamless.png");
 }
 input:focus {
     border: 4px solid purple;
@@ -48,12 +48,12 @@ input:focus {
 	display:inline;
 }
 .photobanner {
- height: 233px;
+ height: 180px;
  width: 3550px;
- margin-bottom: 80px;
+ padding-top:2%;
 }
 .first {
-	width:350px;
+	width:175px;
  -webkit-animation: bannermove 15s linear infinite;
     -moz-animation: bannermove 15s linear infinite;
      -ms-animation: bannermove 15s linear infinite;
@@ -108,7 +108,7 @@ input:focus {
  
 }
 .img {
-	width:350px;
+	width:175px;
 }
 /*end of main Page*/
 /*=========================================================================================================*/
