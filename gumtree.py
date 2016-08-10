@@ -97,7 +97,7 @@ def getResults(searchItem, searchLocation):
       if "wanted" in itemDescription.lower() or "selling" in itemDescription.lower() or "wanted" in itemDescription.lower() or "swap" in itemDescription.lower():
         continue
       itemLocation = item.findAll("div", { "class" : "listing-location" })[0].text.strip()
-      returnItems.append({"image":itemImage, "title":itemTitle, "location":itemLocation, "description":itemDescription})
+      returnItems.append({"image":itemImage, "title":itemTitle, "location":itemLocation, "description":itemDescription, "url":""})
   return returnItems
 
 @route('/search/<item>/<location>')
