@@ -33,7 +33,7 @@
           <a href = "http://www.notifree.ml/"><div id="logo"><img src="http://www.notifree.ml/ntfr-logo.png" id="mainLogo"/></div></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" action="Login.php" method="post">
+          <form class="navbar-form navbar-right" action="http://www.notifree.ml/Login.php" method="post">
             <div class="form-group">
               <input type="text" placeholder="Username" class="form-control" name="username">
             </div>
