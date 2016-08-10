@@ -66,7 +66,7 @@
     <!-- Main area -->
     <div id="mainContent">
       <div class="container">
-        <form action="#" method="post">
+        <form action="search.php" method="post">
           <input id="search" type="search" placeholder="Search for items">
           <input id="initSearch" type="submit">
           <select id="localeSet" name="location">
