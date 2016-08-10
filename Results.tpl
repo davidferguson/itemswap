@@ -55,9 +55,9 @@
         <div id="lwall"></div>
         <div id="rwall"></div>
         % for item in items:
-            <a href="">
+            <a href="{{item["url"]}}">
                 <div class="searchedItem">
-                    <img class="searchedImg" src="{{item[" image "]}}"/>
+                    <img class="searchedImg" src="{{item["image"]}}"/>
                     <h1 class="searchedWord">{{item["title"]}}</h1>
                     <p class="searchedDesc">{{item["description"]}}</p>
                     <p class="searchedLoc">{{item["location"]}}</p>

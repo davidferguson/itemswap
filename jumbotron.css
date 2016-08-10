@@ -2,7 +2,7 @@
 body
 {
   padding-top:50px;
-  background:url(concrete_seamle.png);
+  background:url(concrete_seamless.png);
 }
 
 input:focus
@@ -128,12 +128,16 @@ input:focus
 
 .searchedItem
 {
-  background-color:#5f6cf3;
+  background:#444444;
+  background:-webkit-linear-gradient(to bottom right, #444444, #999999);
+  background:-moz-linear-gradient(to bottom right, #444444, #999999);
+  background:-o-linear-gradient(to bottom right, #444444, #999999);
+  background:linear-gradient(to bottom right, #444444, #999999);
   height:175px;
   border-left:inherit;
   border-right:inherit;
   border-radius:50px;
-  border:2px #2ef3ca dashed;
+  border:2px #888888 solid;
 }
 
 /*end of results*/
