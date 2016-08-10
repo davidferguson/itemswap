@@ -2,7 +2,73 @@ import requests
 from bs4 import BeautifulSoup
 from bottle import route, run, template
 
+locations = [
+  ["renfrew","Renfrew Scotland"],
+  ["AberdeenUK","Aberdeen"],
+  ["AberdeenshireWestFreecycle","Aberdeenshire"],
+  ["AirdrieUK","Airdrie"],
+  ["ArbroathUK","Arbroath"],
+  ["freecycleayr","Ayr"],
+  ["BathgateFreecycle","Bathgate"],
+  ["BerwickshireUK","Berwickshire"],
+  ["freecyclefifecentral","Fife"],
+  ["freecycleclacks","Clackmannanshire"],
+  ["cumbernauld-freecycle","Cumbernauld"],
+  ["Dumbarton","Dumbarton"],
+  ["Dumfries-GallowayFreecycle","Dumfries & Galloway"],
+  ["freecycledundee","Dundee"],
+  ["DunoonUK","Dunoon"],
+  ["edunbartonfreecycle","East Dunbartonshire"],
+  ["EastFifeUK","Fife"],
+  ["EastLothianUK","East Lothian"],
+  ["Easter-RossFreecycle","Easterross"],
+  ["FreecycleEdinburgh","Edinburgh"],
+  ["Ellon","Ellon"],
+  ["FalkirkUK","Falkirk"],
+  ["Galashiels_Freecycle","Galashiels"],
+  ["GlasgowUK","Glasgow"],
+  ["freecyclegrangemouth","Grangemouth"],
+  ["GreenockUK","Greenock"],
+  ["HamiltonLarkhall","Hamilton Larkhall"],
+  ["helensburgh-freecycle","Helensburgh"],
+  ["HuntlyUK","Huntly"],
+  ["InvernessUK","Inverness"],
+  ["IrvineUK","Irvine"],
+  ["IsleOfBute","Bute"],
+  ["KilmarnockUK","Kilmarnock"],
+  ["KintyreUK","Kintyre"],
+  ["KirriemuirUK","Kirriemuir"],
+  ["LanarkUK","Lanark"],
+  ["freecyclelinlithgow","Linlithgow"],
+  ["LivingstonUK","Livingston"],
+  ["Freecycle-Midlothian","Midlothian"],
+  ["montrose","Montrose"],
+  ["morayfreecycle","Moray"],
+  ["NorthwestSutherlandUK","Sutherland"],
+  ["ObanNorthArgyllUK","Argyll"],
+  ["orkneyfreecycle_group","Orkney"],
+  ["paisley-freecycle","Paisley"],
+  ["Peeblesshire_Freecycle","Peeblesshire"],
+  ["PerthSouthUKFreecycle","Perth"],
+  ["RoxburghshireUK","Roxburghshire"],
+  ["SaltcoatsUK","Saltcoats"],
+  ["freecycleshetland","Shetland"],
+  ["skyelochalshfreecycle","Skye & Lochalsh"],
+  ["QueensferryUK","South Queensferry"],
+  ["stirlingcityfreecycle","Stirling"],
+  ["WestFifeScotland","Fife"],
+  ["WesternIslesUK","Western Isles"],
+  ["Wick","Wick"]
+]
+
+def remapLocation(freecycleLocation):
+    for location in locations:
+        if location[0] == freecycleLocation:
+            return location[1]
+
+
 def getResults(searchItem, searchLocation):
+  searchLocation = remapLocation(searchLocation)
   returnItems = []
   result = requests.get("https://www.gumtree.com/search?featured_filter=false&max_price=0&distance=0&urgent_filter=false&sort=date&search_scope=false&photos_filter=true&search_category=for-sale&search_location=" + searchLocation + "&q=" + searchItem)
   soup = BeautifulSoup(result.text)
