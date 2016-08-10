@@ -199,3 +199,43 @@ input:focus {
 	border-radius:50px;
 	border:2px #2ef3ca dashed;
 }
+/*end of results*/
+/*=========================================================================================================*/
+#mainContent4 {
+	text-align:center;
+	font-size:130%;
+	background-color:#888888;
+	padding-bottom:2%;
+	padding-top:10%;
+	border-bottom-left-radius:50px;
+	border-bottom-right-radius:50px;
+	margin:auto;
+}
+.checker {
+	border-radius:100px;
+	width:50px;
+	transition:border-radius 0.5s;
+	transition:width 0.5s;
+	display:inline;
+}
+.checker:focus {
+	border-radius:0px;
+	width:400px;
+}
+#meMail:invalid {
+	background-color:pink;
+}
+#lwall2 {
+	height:100%;
+	width:100px;
+	float:left;
+	background-color:#222222;
+	border-bottom-left-radius:50px;
+}
+#rwall2 {
+	height:100%;
+	width:100px;
+	float:right;
+	background-color:#222222;
+	border-bottom-right-radius:50px;
+}

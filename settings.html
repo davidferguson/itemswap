@@ -48,31 +48,45 @@
     </nav>
 
     <!-- Main area -->
-    <div id="mainContent">
+    <div id="mainContent4">
+      <div id="lwall2" onLoad="left()"></div>
+      <div id="rwall2" onLoad="right()"></div>
       <div class="container">
+        <h1 id="heading">Account Settings</h1>
         <form action="#" method="post">
-          <label class="setLab" for="changeMail">Change your email:</label>
+          <label class="setLab" for="changeMail" optional>Change your email:</label>
           <input class="setting" id="changeMail" type="email"/>
-	  <label class="setLab" for="hoEm">Minimum time between notifications (hours):</label>
-	  <input class="setting" id="hoEm" type="number" min="0" max="24"/>
-	  <div class="savedSearches">
-	    <label class="savedLab" for="unsubscribe">Thing 1 (I have no imagination)</label>
-            <label class="setLab" for="unsubscribe">Unsubscribe</label>
-	    <input class="setting" id="unsubscribe" type="checkbox"/>
-	    <label class="savedLab" for="unsubscribe">Thing 2</label>
-            <label class="setLab" for="unsubscribe">Unsubscribe</label>
-	    <input class="setting" id="unsubscribe" type="checkbox"/>
-	    <label class="savedLab" for="unsubscribe">Thing 3</label>
-            <label class="setLab" for="unsubscribe">Unsubscribe</label>
-	    <input class="setting" id="unsubscribe" type="checkbox"/>
-	    <label class="savedLab" for="unsubscribe">Thing 4</label>
-            <label class="setLab" for="unsubscribe">Unsubscribe</label>
-	    <input class="setting" id="unsubscribe" type="checkbox"/>
-	  </div>
+          <br>
+          <label class="setLab" for="hoEm" optional>Minimum time between notifications (hours):</label>
+          <input class="setting" id="hoEm" type="number" min="0" max="24"/>
+          <br>
+          <div class="savedSearches">
+            <label class="desc" for="unsubscribe">Thing 1 (I have no imagination)</label>
+            <label class="desc" for="unsubscribe">Unsubscribe</label>
+            <input class="checker" id="unsubscribe" type="checkbox"/>
+            <br>
+            <label class="desc" for="unsubscribe">Thing 2</label>
+            <label class="desc" for="unsubscribe">Unsubscribe</label>
+            <input class="checker" id="unsubscribe" type="checkbox"/>
+            <br>
+            <label class="desc" for="unsubscribe">Thing 3</label>
+            <label class="desc" for="unsubscribe">Unsubscribe</label>
+            <input class="checker" id="unsubscribe" type="checkbox"/>
+            <br>
+            <label class="desc" for="unsubscribe">Thing 4</label>
+            <label class="desc" for="unsubscribe">Unsubscribe</label>
+            <input class="checker" id="unsubscribe" type="checkbox"/>
+            <br>
+          </div>
           <input class="setting2" type="submit"/>
-	</form>
+        </form>
       </div>
     </div>
+
+    <script>
+      function left () {document.getElementById("lwall2").style.height = document.getElementById("mainContent4").style.height;}
+      function right () {document.getElementById("rwall2").style.height = document.getElementById("mainContent4").style.height;}
+    </script>
 
 
 

@@ -68,24 +68,24 @@
         <form action="#" method="post">
           <label class="setLab" for="changeMail">Change your email:</label>
           <input class="setting" id="changeMail" type="email"/>
-	  <label class="setLab" for="hoEm">Minimum time between notifications (hours):</label>
-	  <input class="setting" id="hoEm" type="number" min="0" max="24"/>
-	  <div class="savedSearches">
-	    <label class="savedLab" for="unsubscribe">Thing 1 (I have no imagination)</label>
+	        <label class="setLab" for="hoEm">Minimum time between notifications (hours):</label>
+	        <input class="setting" id="hoEm" type="number" min="0" max="24"/>
+	        <div class="savedSearches">
+	          <label class="savedLab" for="unsubscribe">Thing 1 (I have no imagination)</label>
             <label class="setLab" for="unsubscribe">Unsubscribe</label>
-	    <input class="setting" id="unsubscribe" type="checkbox"/>
-	    <label class="savedLab" for="unsubscribe">Thing 2</label>
+	          <input class="setting" id="unsubscribe" type="checkbox"/>
+	          <label class="savedLab" for="unsubscribe">Thing 2</label>
             <label class="setLab" for="unsubscribe">Unsubscribe</label>
-	    <input class="setting" id="unsubscribe" type="checkbox"/>
-	    <label class="savedLab" for="unsubscribe">Thing 3</label>
+	          <input class="setting" id="unsubscribe" type="checkbox"/>
+	          <label class="savedLab" for="unsubscribe">Thing 3</label>
             <label class="setLab" for="unsubscribe">Unsubscribe</label>
-	    <input class="setting" id="unsubscribe" type="checkbox"/>
-	    <label class="savedLab" for="unsubscribe">Thing 4</label>
+	          <input class="setting" id="unsubscribe" type="checkbox"/>
+	          <label class="savedLab" for="unsubscribe">Thing 4</label>
             <label class="setLab" for="unsubscribe">Unsubscribe</label>
-	    <input class="setting" id="unsubscribe" type="checkbox"/>
-	  </div>
+	          <input class="setting" id="unsubscribe" type="checkbox"/>
+	        </div>
           <input class="setting2" type="submit"/>
-	</form>
+	      </form>
       </div>
     </div>
 
