@@ -16,14 +16,14 @@ $email = mysqli_real_escape_string($conn, $_POST["email"]);
 
 
 $sql = "UPDATE `users` SET email = '". $email . "' WHERE username = '" . $_SESSION["username"] ."'";
-echo $sql;
-/*
+
+
 if ($conn->query($sql) === TRUE) {
-    header("Location: /");
+    header("Location: settings.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-*/
+
 $conn->close();
 
 ?>
