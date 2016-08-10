@@ -16,7 +16,7 @@ $email = mysqli_real_escape_string($conn, $_POST["email"]);
 
 
 $sql = "UPDATE `users` SET email = '". $email . "' WHERE username = '" . $_SESSION["username"] ."'";
-echo $sql
+echo $sql;
 /*
 if ($conn->query($sql) === TRUE) {
     header("Location: /");
