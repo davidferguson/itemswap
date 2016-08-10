@@ -33,12 +33,12 @@
           <a href = "index.html"><div id="logo"><img src="ntfr-logo.png" id="mainLogo"/></div></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
+          <form class="navbar-form navbar-right" action="Login.php" method="post">
             <div class="form-group">
-              <input type="text" placeholder="Username" class="form-control">
+              <input type="text" placeholder="Username" class="form-control" name="username">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input type="password" placeholder="Password" class="form-control" name="password">
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
             <a href="Sign_up.html" class="btn btn-info" role="button">Sign up</a>
