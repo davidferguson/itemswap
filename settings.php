@@ -29,20 +29,35 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html" id="mainTitle">NotiFree</a>
-          <a href="index.html"><div id="logo"><img src="ntfr-logo.png" id="mainLogo"/></div></a>
+          <a class="navbar-brand" href="index.php" id="mainTitle">NotiFree</a>
+          <a href = "index.php"><div id="logo"><img src="ntfr-logo.png" id="mainLogo"/></div></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
+    <?php
+    session_start();
+    if( !isset($_SESSION["username"] ) ) {
+    ?>  
+    
+          <form class="navbar-form navbar-right" action="Login.php" method="post">
             <div class="form-group">
-              <input type="text" placeholder="Username" class="form-control">
+              <input type="text" placeholder="Username" class="form-control" name="username">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input type="password" placeholder="Password" class="form-control" name="password">
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
             <a href="Sign_up.html" class="btn btn-info" role="button">Sign up</a>
           </form>
+      <?php
+    } else {
+      ?>
+      <div class="navbar-right">
+       <span class="navbar-brand" href="index.html" id="mainTitle">Welcome <?php echo $_SESSION["username"]; ?></span>
+            <a href="Sign_Out.php" class="btn btn-info" role="button" style="margin-top:8px;">Sign Out</a>
+      </div>
+      <?php
+    }
+      ?>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
