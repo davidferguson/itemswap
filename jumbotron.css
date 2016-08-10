@@ -40,6 +40,10 @@ input:focus {
 	width:75px;
 	display:inline;
 }
+#setLogo {
+	width:75px;
+	display:inline;
+}
 #logo {
 	display:inline;
 }
