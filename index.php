@@ -70,6 +70,7 @@
           <input id="search" type="search" placeholder="Search for items" name="search">
           <input id="initSearch" type="submit" value="Search">
           <select id="localeSet" name="location">
+  <option value="United Kingdom" disabled selected>Select your location</option>
   <option value="renfrew">Renfrew Scotland (Scotland, United Kingdom)</option>
   <option value="AberdeenUK">Aberdeen (Scotland, United Kingdom)</option>
   <option value="AberdeenshireWestFreecycle">Aberdeenshire West, Upper Donside & Upper Deeside (Scotland, United Kingdom)</option>
