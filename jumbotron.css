@@ -156,9 +156,11 @@ input:focus {
 	font-size:130%;
 	background-color:#888888;
 	height:900px;
+	width:100%;
 	border-bottom-left-radius:50px;
 	border-bottom-right-radius:50px;
 	margin:auto;
+	padding-bottom:2%;
 }
 #lwall {
 	height:100%;
@@ -190,10 +192,10 @@ input:focus {
 	display:block;
 }
 .searchedItem {
-	background-color:#5f6cf3;
+	background-color:rgba(100, 100, 100, 0.5);/*5f6cf3*/
 	height:150px;
 	border-left:inherit;
 	border-right:inherit;
-	border-radius:25px;
+	border-radius:50px;
 	border:2px #2ef3ca dashed;
 }
