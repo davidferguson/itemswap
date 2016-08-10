@@ -14,7 +14,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for notifree -->
     <link href="jumbotron.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -65,32 +65,33 @@
     </div>
     
     <script type="text/javascript">
-    window.onload = function () {
-      document.getElementById("mePass").onchange = validatePassword;
-      document.getElementById("mePass2").onchange = validatePassword;
-      /*document.getElementById("mePass").onchange = validatePassword2;
-      document.getElementById("mePass2").onchange = validatePassword2;*/
-    }
-    function validatePassword() {
-      var pass2=document.getElementById("mePass2").value;
-      var pass1=document.getElementById("mePass").value;
-      if(pass1!=pass2)
-        document.getElementById("mePass2").setCustomValidity("Passwords Don't Match");
-      else
-        document.getElementById("mePass2").setCustomValidity('');  
-      //empty string means no validation error
-      if (!checkPassword(pass1)) {
-        document.getElementById("mePass").setCustomValidity("Password does not meet criteria");
+      window.onload = function () {
+        document.getElementById("mePass").onchange = validatePassword;
+        document.getElementById("mePass2").onchange = validatePassword;
       }
-      else {
-        document.getElementById("mePass").setCustomValidity("");
-      }
-    }
 
-    function checkPassword(str) {
-      var re = /^.{6,}$/;
-      return re.test(str);
-    }
+      // check if the passwords are equal, and pass validation
+      function validatePassword() {
+        var pass2=document.getElementById("mePass2").value;
+        var pass1=document.getElementById("mePass").value;
+        if(pass1!=pass2)
+          document.getElementById("mePass2").setCustomValidity("Passwords Don't Match");
+        else
+          document.getElementById("mePass2").setCustomValidity('');  
+        //empty string means no validation error
+        if (!checkPassword(pass1)) {
+          document.getElementById("mePass").setCustomValidity("Password does not meet criteria");
+        }
+        else {
+          document.getElementById("mePass").setCustomValidity("");
+        }
+      }
+
+      // check if the password has at least 6 characters
+      function checkPassword(str) {
+        var re = /^.{6,}$/;
+        return re.test(str);
+      }
     </script>
 
 
