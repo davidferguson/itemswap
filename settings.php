@@ -70,7 +70,7 @@
         <strong><h1 id="heading" style="font-size:300%">Account Settings</h1></strong>
         <form action="updatesettings.php" method="post">
           <label class="setLab" for="changeMail" optional>Change your email:</label>
-          <input class="setting" id="changeMail" type="email"/>
+          <input class="setting" id="changeMail" type="email" name="email"/>
           <br>
           <label class="setLab" for="hoEm" optional>Minimum time between notifications (hours):</label>
           <input class="setting" id="hoEm" type="number" min="0" max="24"/>
