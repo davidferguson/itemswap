@@ -49,6 +49,12 @@
             <a href="Sign_up.html" class="btn btn-info" role="button">Sign up</a>
           </form>
 		  <?php
+		} else {
+			?>
+			 <a class="navbar-brand" href="index.html" id="mainTitle">Welcome <?php echo $SESSION_username; ?></a>
+            <a href="Sign_Out.php" class="btn btn-info" role="button">Sign Out</a>
+      
+			<?php
 		}
 		  ?>
         </div><!--/.navbar-collapse -->
