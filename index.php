@@ -26,7 +26,7 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="margin-bottom:0px;">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.php" id="mainTitle">NotiFree</a>
@@ -64,7 +64,7 @@
     </nav>
 
     <!-- Main area -->
-    <div id="mainContent">
+    <div id="mainContent" style="margin-top: -16px;">
       <div class="container">
         <form action="search.php" method="post">
           <input id="search" type="search" placeholder="Search for items" name="search">
