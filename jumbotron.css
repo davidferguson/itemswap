@@ -9,10 +9,10 @@ input:focus {
 }
 #search {
 	border-radius:20px;
+	font-size:400%;
 }
 #mainContent {
 	text-align:center;
-	font-size:400%;
 	background-color:#888888;
 	padding-bottom:10%;
 	padding-top:15%;
@@ -21,12 +21,16 @@ input:focus {
 }
 #initSearch {
 	border-radius:20px;
+	font-size:400%;
+}
+#localeSet {
+	font-size:200%;
 }
 #container {
 	width:1000px;
 	overflow:hidden;
 	margin: 50px auto;
-	background: white;
+	background: grey;
 	border-radius:100px;
 }
 #mainTitle {
@@ -144,4 +148,52 @@ input:focus {
     display:block;
     margin:auto;
     margin-top:10px;
+}
+/*end of sign in*/
+/*=========================================================================================================*/
+#mainContent3 {
+	text-align:center;
+	font-size:130%;
+	background-color:#888888;
+	height:900px;
+	border-bottom-left-radius:50px;
+	border-bottom-right-radius:50px;
+	margin:auto;
+}
+#lwall {
+	height:100%;
+	width:100px;
+	float:left;
+	background-color:#222222;
+	border-bottom-left-radius:50px;
+}
+#rwall {
+	height:100%;
+	width:100px;
+	float:right;
+	background-color:#222222;
+	border-bottom-right-radius:50px;
+}
+.searchedImg {
+	width:10%;
+	display:inline;
+	float:left;
+	border-radius:25px;
+}
+.searchedWord {
+	display:inline;
+}
+.searchedDesc {
+	display:block;
+}
+.searchedLoc {
+	display:block;
+}
+.searchedItem {
+	background-color:#5f6cf3;
+	height:150px;
+	border-left:inherit;
+	border-right:inherit;
+	border-radius:25px;
+	border:2px #2ef3ca dashed;
 }

@@ -48,50 +48,29 @@
     </nav>
 
     <!-- Main area -->
-    <div id="mainContent2">
-      <div class="container">
-        <form action="signup.php" method="post">
-          <label class="signLab" for="meMail">Enter your Email:</label>
-          <input class="userSign" id="meMail" name="email" type="email" required/>
-          <label class="signLab" for="meName">Enter your Username:</label>
-          <input class="userSign" id="meName" name="username" type="text" required/>
-          <label class="signLab" for="mePass">Enter your Password:</label>
-          <input class="userSign" id="mePass" name="password" type="password" required/>
-          <label class="signLab" for="mePass2">Confirm your Password:</label>
-          <input class="userSign" id="mePass2" name="cpassword" type="password" required/>
-          <input class="userSign2" type="submit"/>
-        </form>
-      </div>
+    <div id="mainContent3">
+      <div id="lwall"></div>
+      <div id="rwall"></div>
+        <div class="searchedItem">
+          <img class="searchedImg" src="ntfr-logo.png"/>
+          <h1 class="searchedWord">Us</h1>
+          <p class="searchedDesc">We cost a lot of money.</p>
+          <p class="searchedLoc">Calne,Edinburgh,SN110DW</p>  
+        </div>
+        <div class="searchedItem">
+          <img class="searchedImg" src="ntfr-logo.png"/>
+          <h1 class="searchedWord">Us</h1>
+          <p class="searchedDesc">We cost a lot of money.</p>
+          <p class="searchedLoc">Calne,Edinburgh,SN110DW</p>  
+        </div>
+        <div class="searchedItem">
+          <img class="searchedImg" src="ntfr-logo.png"/>
+          <h1 class="searchedWord">Us</h1>
+          <p class="searchedDesc">We cost a lot of money.</p>
+          <p class="searchedLoc">Calne,Edinburgh,SN110DW</p>  
+        </div> 
     </div>
-    
-    <script type="text/javascript">
-    window.onload = function () {
-      document.getElementById("mePass").onchange = validatePassword;
-      document.getElementById("mePass2").onchange = validatePassword;
-      /*document.getElementById("mePass").onchange = validatePassword2;
-      document.getElementById("mePass2").onchange = validatePassword2;*/
-    }
-    function validatePassword() {
-      var pass2=document.getElementById("mePass2").value;
-      var pass1=document.getElementById("mePass").value;
-      if(pass1!=pass2)
-        document.getElementById("mePass2").setCustomValidity("Passwords Don't Match");
-      else
-        document.getElementById("mePass2").setCustomValidity('');  
-      //empty string means no validation error
-      if (!checkPassword(pass1)) {
-        document.getElementById("mePass").setCustomValidity("Password does not meet criteria");
-      }
-      else {
-        document.getElementById("mePass").setCustomValidity("");
-      }
-    }
 
-    function checkPassword(str) {
-      var re = /^.{6,}$/;
-      return re.test(str);
-    }
-    </script>
 
 
     <!-- Placed at the end of the document so the pages load faster -->
