@@ -65,7 +65,7 @@
       function left () {document.getElementById("lwall").style.height = document.getElementById("mainContent3").style.height;}
       function right () {document.getElementById("rwall").style.height = document.getElementById("mainContent3").style.height;}
       function body () {
-        var heighty = (document.getElementsByClassName("searchedItem").length) * 150;
+        var heighty = (document.getElementsByClassName("searchedItem").length) * 175;
         document.getElementById("mainContent3").style.height = heighty + "px";
         console.log(document.getElementsByClassName("searchedItem").length);
       }
