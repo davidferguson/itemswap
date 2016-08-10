@@ -2,7 +2,7 @@
 body {
   padding-top: 50px;
   /*padding-bottom: 20px;*/
-  background: url("concrete_seamless.png");
+  background: url("concrete_seamle.png");
 }
 input:focus {
     border: 4px solid purple;
@@ -48,12 +48,12 @@ input:focus {
 	display:inline;
 }
 .photobanner {
- height: 180px;
+ height: 233px;
  width: 3550px;
- padding-top:2%;
+ margin-bottom: 80px;
 }
 .first {
-	width:175px;
+	width:350px;
  -webkit-animation: bannermove 15s linear infinite;
     -moz-animation: bannermove 15s linear infinite;
      -ms-animation: bannermove 15s linear infinite;
@@ -108,7 +108,7 @@ input:focus {
  
 }
 .img {
-	width:175px;
+	width:350px;
 }
 /*end of main Page*/
 /*=========================================================================================================*/
