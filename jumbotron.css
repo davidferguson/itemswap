@@ -139,6 +139,16 @@ input:focus
   border-radius:50px;
   border:2px #888888 solid;
   padding-top: 20px;
+  color:#00ff00;
+}
+.searchedWord:hover {
+  color:#00dd00;
+}
+.searchedDesc:hover {
+  color:#00dd00;
+}
+.searchedLoc:hover {
+  color:#00dd00;
 }
 
 /*end of results*/
