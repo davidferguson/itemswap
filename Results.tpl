@@ -29,8 +29,8 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html" id="mainTitle">NotiFree</a>
-          <a href = "http://www.notifree.ml/index.html"><div id="logo"><img src="http://www.notifree.ml/ntfr-logo.png" id="mainLogo"/></div></a>
+          <a class="navbar-brand" href="http://www.notifree.ml/" id="mainTitle">NotiFree</a>
+          <a href = "http://www.notifree.ml/"><div id="logo"><img src="http://www.notifree.ml/ntfr-logo.png" id="mainLogo"/></div></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" action="Login.php" method="post">

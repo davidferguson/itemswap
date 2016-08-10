@@ -68,6 +68,7 @@ def remapLocation(freecycleLocation):
 
 
 def getResults(searchItem, searchLocation):
+  list = ""
   searchLocation = remapLocation(searchLocation)
   returnItems = []
   result = requests.get("https://www.gumtree.com/search?featured_filter=false&max_price=0&distance=0&urgent_filter=false&sort=date&search_scope=false&photos_filter=true&search_category=for-sale&search_location=" + searchLocation + "&q=" + searchItem)
@@ -76,6 +77,8 @@ def getResults(searchItem, searchLocation):
     if "data-q" in item.attrs:
       if item["data-q"] == "naturalresults":
         list = item
+  if list == "":
+    return []
   items = list.find_all("li")
   for item in items:
     check = item.find_all("article", { "class" : "listing-maxi" })
@@ -88,7 +91,11 @@ def getResults(searchItem, searchLocation):
       except:
         itemImage = item.find_all("img")[0]["data-lazy"]
       itemTitle = item.find_all("h2")[0].text.strip()
-      itemDescription = item.find_all("p")[0].text.strip()
+      if "wanted" in itemTitle.lower() or "selling" in itemTitle.lower() or "wanted" in itemTitle.lower() or "swap" in itemTitle.lower():
+        continue
+      itemDescription = item.find_all("p")[0].text.strip() + "..."
+      if "wanted" in itemDescription.lower() or "selling" in itemDescription.lower() or "wanted" in itemDescription.lower() or "swap" in itemDescription.lower():
+        continue
       itemLocation = item.findAll("div", { "class" : "listing-location" })[0].text.strip()
       returnItems.append({"image":itemImage, "title":itemTitle, "location":itemLocation, "description":itemDescription})
   return returnItems
