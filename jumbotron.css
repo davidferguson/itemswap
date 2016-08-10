@@ -138,6 +138,7 @@ input:focus
   border-right:inherit;
   border-radius:50px;
   border:2px #888888 solid;
+  padding-top: 20px;
 }
 
 /*end of results*/
