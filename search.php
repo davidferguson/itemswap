@@ -39,6 +39,6 @@
     }
 
     // now take the user to the result page
-    header("Location: http://www.notifree.ml:8080/search/" . $search . "/" . $location . "/");
+    header("Location: http://search.notifree.ml/search/" . $search . "/" . $location . "/");
 
 ?>
