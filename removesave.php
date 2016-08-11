@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+	
     // define mysql server details
     $servername = "127.0.0.1";
     $dbusername = "notifree";
@@ -21,8 +23,6 @@
 
     // generate the SELECT mysql query
     $sql = "DELETE FROM `searches` WHERE username = '".$_SESSION["username"]."' AND id = '".$id."'";
-
-    //
     if ($conn->query($sql) === TRUE) {
         // if the query executed successfully, take the user back to the homepage
         header("Location: settings.php");
@@ -30,7 +30,6 @@
         // if there was an error, tell the user
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
     $conn->close();
 
 ?>
