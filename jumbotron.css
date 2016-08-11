@@ -181,7 +181,7 @@ input:focus {
   border-bottom-right-radius:50px;
 }
 .searchedImg {
-  width:10%;
+  max-height: 125px;
   display:inline;
   float:left;
   border-radius:25px;
