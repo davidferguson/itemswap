@@ -170,7 +170,7 @@ def getGumtreeResults(searchItem, searchLocation):
 
 @route('/search/<item>/<location>')
 @route('/search/<item>/<location>/')
-def hello(item, location):
+def search(item, location):
   freecycleResults = getFreecycleResults(item, location)
   gumtreeResults = getGumtreeResults(item, location)
   results = sortResults(freecycleResults, gumtreeResults)
@@ -179,7 +179,7 @@ def hello(item, location):
 
 @route('/homepage')
 @route('/homepage/')
-def hello(item, location):
+def homepage():
   freecycleResults = getFreecycleResults("", "FreecycleEdinburgh")
   gumtreeResults = getGumtreeResults("", "FreecycleEdinburgh")
   results = sortResults(freecycleResults, gumtreeResults)
