@@ -5,6 +5,7 @@ import MySQLdb
 import datetime
 import smtplib
 
+# easy to use object to use with the database
 class dbConn(object):
 	conn = None
 	def connect(self):
@@ -38,6 +39,7 @@ class dbConn(object):
 			self.conn.commit()
 		return result
 
+# used to remap Freecycle groups to locations
 locations = [
   ["renfrew","Renfrew Scotland"],
   ["AberdeenUK","Aberdeen"],
@@ -97,6 +99,7 @@ locations = [
   ["Wick","Wick"]
 ]
 
+# used to sort results in order of date
 def sortResults(freecycleResults, gumtreeResults):
   if freecycleResults is not None and gumtreeResults is not None:
     allResults = freecycleResults + gumtreeResults
@@ -110,11 +113,13 @@ def sortResults(freecycleResults, gumtreeResults):
   sortedResults = [x for (y,x) in sorted(zip(allTimes,allResults))]
   return sortedResults
 
+# remaps the freecycle location to a gumtree location
 def remapLocation(freecycleLocation):
   for location in locations:
     if location[0] == freecycleLocation:
       return location[1]
 
+# converts dates like "3 hours ago" into unix timestamp
 def parseGumtreeDate(dateString):
   print dateString
   dateArray = dateString.lower().split(" ")
@@ -135,12 +140,13 @@ def parseGumtreeDate(dateString):
   epochDate = (postDate - datetime.datetime(1970,1,1)).total_seconds()
   return epochDate
 
-
+# converts dates like "Aug 20 15:43:41 2016" into unix timestamp
 def parseFreecycleDate(dateString):
   postDate = datetime.datetime.strptime(dateString, "%b %d %H:%M:%S %Y")
   epochDate = (postDate - datetime.datetime(1970,1,1)).total_seconds()
   return epochDate
 
+# grab and parse results from freecycle
 def getFreecycleResults(searchItem, searchLocation):
   returnItems = []
   result = requests.get("https://groups.freecycle.org/group/" + searchLocation + "/posts/offer?page=1&resultsperpage=100")
@@ -161,6 +167,7 @@ def getFreecycleResults(searchItem, searchLocation):
       returnItems.append({"image":image, "title":title, "location":location , "description":description, "url":url, "epoch":epochDate})
       return returnItems
 
+# grab and parse results from gumtree
 def getGumtreeResults(searchItem, searchLocation):
   list = ""
   searchLocation = remapLocation(searchLocation)
@@ -199,6 +206,7 @@ def getGumtreeResults(searchItem, searchLocation):
       returnItems.append({"image":itemImage, "title":itemTitle, "location":itemLocation, "description":itemDescription, "url":itemLink, "epoch":epochDate, "date":itemDate})
   return returnItems
 
+# scan gumtree and freecycle and work out which ones are new
 def rescanSearch(searchItem, searchLocation, lastScanDate):
   freecycleResults = getFreecycleResults(searchItem, searchLocation)
   gumtreeResults = getGumtreeResults(searchItem, searchLocation)
@@ -213,9 +221,13 @@ def rescanSearch(searchItem, searchLocation, lastScanDate):
   print newResults
   return newResults
 
+### MAIN SCRIPT ##########
+
+# connect to database and get data
 dbconnection = dbConn()
 searches = dbconnection.select("SELECT * FROM searches")
 
+# loop through all saved searches, emailing out new posts
 for search in searches:
   newItems = rescanSearch(search["keywords"], search["location"], search["time"])
   if len(newItems) != 0:
@@ -241,4 +253,3 @@ Since you last searched, new items matching '""" + search["keywords"] + """' hav
      print "Successfully sent email"
   except SMTPException:
      print "Error: unable to send email"
-
