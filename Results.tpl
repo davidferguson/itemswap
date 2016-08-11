@@ -134,7 +134,7 @@
 
         function body() {
             var heighty = (document.getElementsByClassName("searchedItem").length) * 175;
-            document.getElementById("mainContent3").style.height = heighty + "px";
+            document.getElementById("mainContent3").style.height = (heighty + 100) + "px";
             console.log(document.getElementsByClassName("searchedItem").length);
         }
         body()
