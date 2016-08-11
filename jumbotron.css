@@ -169,7 +169,6 @@ input:focus {
   border-bottom-left-radius:50px;
   border-bottom-right-radius:50px;
   margin:auto;
-  padding-bottom:2%;
   margin-top:15px;
 }
 #initSearchnav {
@@ -238,7 +237,6 @@ input:focus {
   text-align:center;
   font-size:130%;
   background-color:#888888;
-  padding-bottom:2%;
   height:800px;
   border-bottom-left-radius:50px;
   border-bottom-right-radius:50px;
