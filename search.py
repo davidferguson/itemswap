@@ -186,8 +186,8 @@ def search(item, location):
 @route('/homepage/')
 def homepage():
   gumtreeResults = getGumtreeResults("", "FreecycleEdinburgh")
-  randomResults = random.shuffle(gumtreeResults)
-  selectedResults = randomResults[:6]
+  random.shuffle(gumtreeResults)
+  selectedResults = gumtreeResults[:6]
   return json.dumps(selectedResults)
 
 #run(host='', port=8080)
