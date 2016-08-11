@@ -154,16 +154,16 @@
     <div id="gallery">
         <div id="container">
             <div class="photobanner">
-                <img id="img1" class="first" src="ntfr-logo.png" alt="" />
-                <img id="img2" class="img" src="ntfr-logo.png" alt="" />
-                <img id="img3" class="img" src="ntfr-logo.png" alt="" />
-                <img id="img4" class="img" src="ntfr-logo.png" alt="" />
-                <img id="img5" class="img" src="ntfr-logo.png" alt="" />
-                <img id="img6" class="img" src="ntfr-logo.png" alt="" />
-                <img id="img1-1" class="img" src="ntfr-logo.png" alt="" />
-                <img id="img1-2" class="img" src="ntfr-logo.png" alt="" />
-                <img id="img1-3" class="img" src="ntfr-logo.png" alt="" />
-                <img id="img1-4" class="img" src="ntfr-logo.png" alt="" />
+                <a href=""></a><img id="img1" class="first" src="ntfr-logo.png" alt="" /></a>
+                <a href=""><img id="img2" class="img" src="ntfr-logo.png" alt="" /></a>
+                <a href=""><img id="img3" class="img" src="ntfr-logo.png" alt="" /></a>
+                <a href=""><img id="img4" class="img" src="ntfr-logo.png" alt="" /></a>
+                <a href=""><img id="img5" class="img" src="ntfr-logo.png" alt="" /></a>
+                <a href=""><img id="img6" class="img" src="ntfr-logo.png" alt="" /></a>
+                <a href=""><img id="img1-1" class="img" src="ntfr-logo.png" alt="" /></a>
+                <a href=""><img id="img1-2" class="img" src="ntfr-logo.png" alt="" /></a>
+                <a href=""><img id="img1-3" class="img" src="ntfr-logo.png" alt="" /></a>
+                <a href=""><img id="img1-4" class="img" src="ntfr-logo.png" alt="" /></a>
             </div>
             <!--Goes from 1-6 then back to 1-->
         </div>
@@ -174,6 +174,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script>
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+          if (request.readyState == 4 && request.status == 200) {
+            var data = JSON.parse(request.responseText);
+            document.getElementById("img1").src = data[0].image;
+            document.getElementById("img1").parentElement.hred = data[0].url;
+            document.getElementById("img2").src = data[1].image;
+            document.getElementById("img2").parentElement.hred = data[1].url;
+            document.getElementById("img3").src = data[2].image;
+            document.getElementById("img3").parentElement.hred = data[2].url;
+            document.getElementById("img4").src = data[3].image;
+            document.getElementById("img4").parentElement.hred = data[3].url;
+            document.getElementById("img5").src = data[4].image;
+            document.getElementById("img5").parentElement.hred = data[4].url;
+            document.getElementById("img6").src = data[5].image;
+            document.getElementById("img6").parentElement.hred = data[5].url;
+            document.getElementById("img1-1").src = data[0].image;
+            document.getElementById("img1-1").parentElement.hred = data[0].url;
+            document.getElementById("img1-2").src = data[1].image;
+            document.getElementById("img1-2").parentElement.hred = data[1].url;
+            document.getElementById("img1-3").src = data[2].image;
+            document.getElementById("img1-3").parentElement.hred = data[2].url;
+            document.getElementById("img1-4").src = data[3].image;
+            document.getElementById("img1-4").parentElement.hred = data[3].url;
+          }
+        };
+        request.open("GET", "http://www.notifree.ml:8080/homepage/", true);
+        request.send();
     </script>
     <script src="js/bootstrap.min.js"></script>
 </body>
