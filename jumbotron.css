@@ -1,220 +1,260 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
-body
-{
-  padding-top:50px;
-  background:url(concrete_seamless.png);
+body {
+  padding-top: 50px;
+  /*padding-bottom: 20px;*/
+  background: url("concrete_seamless.png");
 }
-
-input:focus
-{
-  border:4px solid purple;
+input:focus {
+    border: 4px solid purple;
 }
-
-#mainContent
-{
+#search {
+  border-radius:20px;
+  font-size:400%;
+}
+#mainContent {
   text-align:center;
-  background-color:#888;
+  background-color:#888888;
   padding-bottom:10%;
   padding-top:15%;
   border-bottom-left-radius:50px;
-  border-bottom-right-radius:50px;
+  border-bottom-right-radius:50px; 
 }
-
-#localeSet
-{
+#initSearch {
+  border-radius:20px;
+  font-size:400%;
+}
+#localeSet {
   font-size:200%;
 }
-
-#container
-{
+#container {
   width:1000px;
   overflow:hidden;
-  background:grey;
+  margin: 50px auto;
+  background: grey;
   border-radius:100px;
-  margin:50px auto;
 }
-
-#mainLogo
-{
+#mainTitle {
+  display:inline;
+}
+#mainLogo {
   width:75px;
   display:inline;
 }
-
-#setLogo
-{
+#setLogo {
   width:37px;
   display:inline;
 }
-
-.photobanner
-{
-  height:233px;
-  width:3550px;
-  margin-bottom:80px;
+#logo {
+  display:inline;
 }
-
-.first
-{
+.photobanner {
+ height: 233px;
+ width: 3550px;
+ margin-bottom: 80px;
+}
+.first {
   width:350px;
-  -webkit-animation:bannermove 15s linear infinite;
-  -moz-animation:bannermove 15s linear infinite;
-  -ms-animation:bannermove 15s linear infinite;
-  -o-animation:bannermove 15s linear infinite;
-  animation:bannermove 15s linear infinite;
+ -webkit-animation: bannermove 15s linear infinite;
+    -moz-animation: bannermove 15s linear infinite;
+     -ms-animation: bannermove 15s linear infinite;
+      -o-animation: bannermove 15s linear infinite;
+         animation: bannermove 15s linear infinite;
 }
-
-100%
-{
-  margin-left:-2125px;
+@keyframes "bannermove" {
+  0% {
+    margin-left:0px;
+  }
+  100% {
+    margin-left:2125px;
+  }
 }
-
-.img
-{
+@-moz-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+ 
+}
+ 
+@-webkit-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+ 
+}
+ 
+@-ms-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+ 
+}
+ 
+@-o-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+ 
+}
+.img {
   width:350px;
 }
-
 /*end of main Page*/
 /*=========================================================================================================*/
-
-#mainContent2
-{
+#mainContent2 {
   text-align:center;
   font-size:130%;
-  background-color:#888;
+  background-color:#888888;
   padding-bottom:20%;
   padding-top:15%;
   border-bottom-left-radius:50px;
   border-bottom-right-radius:50px;
   margin:auto;
 }
-
-.userSign
-{
+#meMail:invalid {
+  background-color:pink;
+}
+#meName:invalid {
+  background-color:pink;
+}
+#mePass:invalid {
+  background-color:pink;
+}
+#mePass2:invalid {
+  background-color:pink;
+}
+.userSign {
   border-radius:100px;
   width:300px;
-  transition:width .5s;
+  transition:border-radius 0.5s;
+  transition:width 0.5s;
   display:inline;
 }
-
-.userSign2
-{
+.signLab {
   display:block;
-  margin:10px auto auto;
 }
-
+.userSign:focus {
+  border-radius:0px;
+  width:400px;
+}
+.userSign2 {
+    display:block;
+    margin:auto;
+    margin-top:10px;
+}
 /*end of sign in*/
 /*=========================================================================================================*/
-
-#mainContent3
-{
+#mainContent3 {
   text-align:center;
   font-size:130%;
-  background-color:#888;
+  background-color:#888888;
   height:900px;
   width:100%;
   border-bottom-left-radius:50px;
   border-bottom-right-radius:50px;
-  padding-bottom:2%;
   margin:auto;
+  padding-bottom:2%;
 }
-
-.searchedImg
-{
+#lwall {
+  height:100%;
+  width:100px;
+  float:left;
+  background-color:#222222;
+  border-bottom-left-radius:50px;
+}
+#rwall {
+  height:100%;
+  width:100px;
+  float:right;
+  background-color:#222222;
+  border-bottom-right-radius:50px;
+}
+.searchedImg {
   width:10%;
   display:inline;
   float:left;
   border-radius:25px;
 }
-
-.searchedItem
-{
+.searchedWord {
+  display:inline;
+}
+.searchedDesc {
+  display:block;
+}
+.searchedLoc {
+  display:block;
+}
+.searchedItem {
   background:#444444;
-  background:-webkit-linear-gradient(to bottom right, #444444, #999999);
-  background:-moz-linear-gradient(to bottom right, #444444, #999999);
-  background:-o-linear-gradient(to bottom right, #444444, #999999);
-  background:linear-gradient(to bottom right, #444444, #999999);
+   background:-webkit-linear-gradient(to bottom right, #444444, #999999);
+   background:-moz-linear-gradient(to bottom right, #444444, #999999);
+   background:-o-linear-gradient(to bottom right, #444444, #999999);
+   background:linear-gradient(to bottom right, #444444, #999999);
   height:175px;
   border-left:inherit;
   border-right:inherit;
   border-radius:50px;
   border:2px #888888 solid;
-  padding-top: 20px;
+  padding-top:20px;
   color:#00ff00;
-}
-.searchedWord:hover {
-  color:#00dd00;
-}
-.searchedDesc:hover {
-  color:#00dd00;
-}
-.searchedLoc:hover {
-  color:#00dd00;
-}
-
+ }
+ .searchedWord:hover {
+   color:#00dd00;
+ }
+ .searchedDesc:hover {
+   color:#00dd00;
+ }
+ .searchedLoc:hover {
+   color:#00dd00;
+ }
 /*end of results*/
 /*=========================================================================================================*/
-
-#mainContent4
-{
+#mainContent4 {
   text-align:center;
   font-size:130%;
-  background-color:#888;
+  background-color:#888888;
   padding-bottom:2%;
   height:800px;
   border-bottom-left-radius:50px;
   border-bottom-right-radius:50px;
   margin:auto;
 }
-
-.checker
-{
+.checker {
   border-radius:100px;
   width:50px;
-  transition:width .5s;
+  transition:border-radius 0.5s;
+  transition:width 0.5s;
   display:inline;
 }
-
-#search,#initSearch
-{
-  border-radius:20px;
-  font-size:400%;
-}
-
-#mainTitle,#logo,.searchedWord
-{
-  display:inline;
-}
-
-#meMail:invalid,#meName:invalid,#mePass:invalid,#mePass2:invalid
-{
-  background-color:#FFC0CB;
-}
-
-.signLab,.searchedDesc,.searchedLoc
-{
-  display:block;
-}
-
-.userSign:focus,.checker:focus
-{
-  border-radius:0;
+.checker:focus {
+  border-radius:0px;
   width:400px;
 }
-
-#lwall,#lwall2
-{
+#meMail:invalid {
+  background-color:pink;
+}
+#lwall2 {
   height:100%;
   width:100px;
   float:left;
-  background-color:#222;
+  background-color:#222222;
   border-bottom-left-radius:50px;
 }
-
-#rwall,#rwall2
-{
+#rwall2 {
   height:100%;
   width:100px;
   float:right;
-  background-color:#222;
+  background-color:#222222;
   border-bottom-right-radius:50px;
 }
