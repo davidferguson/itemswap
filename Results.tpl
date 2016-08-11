@@ -138,6 +138,8 @@
             console.log(document.getElementsByClassName("searchedItem").length);
         }
         body()
+        left()
+        right()
     </script>
 
     <!-- Placed at the end of the document so the pages load faster -->
