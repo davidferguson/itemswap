@@ -28,7 +28,7 @@
         $location = mysqli_real_escape_string($conn, $location);
 
         // generate the SELECT mysql query
-        $sql = "INSERT INTO searches VALUES ('0', '" . $search . "', '" . $_SESSION["username"] . "', '" . $location . "', '" + time() + "')";
+        $sql = "INSERT INTO searches VALUES ('0', '" . $search . "', '" . $_SESSION["username"] . "', '" . $location . "', '" . time() . "')";
 
         // now run the query, and check the result
         if ($conn->query($sql) != TRUE) {
