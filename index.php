@@ -136,11 +136,18 @@
                     <option value="WesternIslesUK">Western Isles (Outer Hebrides) (Scotland, United Kingdom)</option>
                     <option value="Wick">Wick (Scotland, United Kingdom)</option>
                 </select>
+                <?php
+                    session_start();
+                    if( isset($_SESSION["username"] ) ) {
+                ?>
+                <input type="checkbox" id="savesearch">
+                <label id="boxLab" for="savesearch">:Save this search</label>
             </form>
         </div>
     </div>
 
     <!-- scrolling gallery - to be implemented -->
+    <strong><h1 style="font-size:200%;text-align:center">Items you might want to consider...</h1></strong>
     <div id="gallery">
         <div id="container">
             <div class="photobanner">

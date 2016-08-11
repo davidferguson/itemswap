@@ -36,7 +36,7 @@
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right" action="http://www.notifree.ml/Login.php" method="post">
+                <!--<form class="navbar-form navbar-right" action="http://www.notifree.ml/Login.php" method="post">
                     <div class="form-group">
                         <input type="text" placeholder="Username" class="form-control" name="username">
                     </div>
@@ -45,7 +45,7 @@
                     </div>
                     <button type="submit" class="btn btn-success">Sign in</button>
                     <a href="Sign_up.html" class="btn btn-info" role="button">Sign up</a>
-                </form>
+                </form>-->
             </div>
         </div>
     </nav>
@@ -54,6 +54,7 @@
     <div id="mainContent3">
         <div id="lwall"></div>
         <div id="rwall"></div>
+        <h1 style="font-size:200%;text-align:center">Results Page</h1>
         % for item in items:
             <a href="{{item["url"]}}">
                 <div class="searchedItem">

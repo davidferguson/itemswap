@@ -24,7 +24,10 @@ input:focus {
   font-size:400%;
 }
 #localeSet {
-  font-size:200%;
+  font-size:150%;
+}
+#boxLab {
+  display:inline;
 }
 #container {
   width:1000px;
@@ -43,6 +46,7 @@ input:focus {
 #setLogo {
   width:37px;
   display:inline;
+  margin-top:7.5px;
 }
 #logo {
   display:inline;
@@ -237,7 +241,7 @@ input:focus {
   transition:width 0.5s;
   display:inline;
 }
-.checker:focus {
+.checker:hover {
   border-radius:0px;
   width:400px;
 }
