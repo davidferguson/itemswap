@@ -113,7 +113,8 @@
 					  </button>
 					</a>
                     <br>
-               
+                    <?php
+				    } ?>
                 </div>
                 <input class="setting2" type="submit" />
             </form>
