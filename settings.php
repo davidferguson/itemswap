@@ -107,7 +107,7 @@
 				while($row = mysqli_fetch_assoc($result) ) {
 				?>
                     <label class="desc" for="unsubscribe"><?php echo $row["keywords"]; ?></label>
-                    <a href="removesaved.php?id=<?php echo $row["id"]?>">
+                    <a href="removesave.php?id=<?php echo $row["id"]?>">
 					  <button type="button" class="btn btn-danger">
 						<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 					  </button>
