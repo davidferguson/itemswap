@@ -169,6 +169,15 @@ input:focus {
   border-bottom-right-radius:50px;
   margin:auto;
   padding-bottom:2%;
+  margin-top:15px;
+}
+#initSearchnav {
+  border-radius:20px;
+  font-size:20%;
+}
+#localeSetnav {
+  font-size:10%;
+  display:block;
 }
 #lwall {
   height:100%;
@@ -210,17 +219,17 @@ input:focus {
   border-right:inherit;
   border-radius:50px;
   border:2px #888888 solid;
-  padding-top:20px;
-  color:#00ff00;
+  padding-top:50px;
+  color:#000000;
  }
  .searchedWord:hover {
-   color:#00dd00;
+   color:#333333;
  }
  .searchedDesc:hover {
-   color:#00dd00;
+   color:#333333;
  }
  .searchedLoc:hover {
-   color:#00dd00;
+   color:#333333;
  }
 /*end of results*/
 /*=========================================================================================================*/
