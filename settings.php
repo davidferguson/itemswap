@@ -1,3 +1,20 @@
+<?php
+ session_start();
+
+    // define mysql server details
+    $servername = "127.0.0.1";
+    $dbusername = "notifree";
+    $dbpassword = "prewired2016";
+    $dbname = "notifree";
+
+    // connect to server, displaying message on error
+    $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+   ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +55,7 @@
             <!-- navbar contains some PHP code to switch between login option and logout if you're already logged in -->
             <div id="navbar" class="navbar-collapse collapse">
                 <?php
-                    session_start();
+               
                     if( !isset($_SESSION["username"] ) ) {
                 ?>
                     <!-- if the session is not set (and therefore no user is logged in), show the login form -->
@@ -84,22 +101,19 @@
                 <input class="setting" id="hoEm" type="number" min="0" max="24" />
                 <br>
                 <div class="savedSearches">
-                    <label class="desc" for="unsubscribe">Thing 1 (I have no imagination)</label>
-                    <label class="desc" for="unsubscribe">Unsubscribe</label>
-                    <input class="checker" id="unsubscribe" type="checkbox" />
+				<?php
+				$sql = "SELECT * FROM `searches` WHERE username = '".$_SESSION["username"]."'";
+				$result = mysqli_query($conn $sql);
+				while($row = mysqli_fetch_assoc($result) ) {
+				?>
+                    <label class="desc" for="unsubscribe"><?php echo $row["keywords"]; ?></label>
+                    <a href="removesaved.php?id=<?php echo $row["id"]?>">
+					  <button type="button" class="btn btn-danger">
+						<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+					  </button>
+					</a>
                     <br>
-                    <label class="desc" for="unsubscribe">Thing 2</label>
-                    <label class="desc" for="unsubscribe">Unsubscribe</label>
-                    <input class="checker" id="unsubscribe" type="checkbox" />
-                    <br>
-                    <label class="desc" for="unsubscribe">Thing 3</label>
-                    <label class="desc" for="unsubscribe">Unsubscribe</label>
-                    <input class="checker" id="unsubscribe" type="checkbox" />
-                    <br>
-                    <label class="desc" for="unsubscribe">Thing 4</label>
-                    <label class="desc" for="unsubscribe">Unsubscribe</label>
-                    <input class="checker" id="unsubscribe" type="checkbox" />
-                    <br>
+               
                 </div>
                 <input class="setting2" type="submit" />
             </form>
