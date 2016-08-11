@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from bottle import route, run, template
+from bottle import route, run, template, hook, response
 import MySQLdb
 import datetime
 from random import shuffle
@@ -168,6 +168,10 @@ def getGumtreeResults(searchItem, searchLocation):
       returnItems.append({"image":itemImage, "title":itemTitle, "location":itemLocation, "description":itemDescription, "url":itemLink, "epoch":epochDate, "date":itemDate})
   return returnItems
 
+@hook('after_request')
+def enable_cors():
+    response.headers['Access-Control-Allow-Origin'] = '*'
+
 @route('/search/<item>/<location>')
 @route('/search/<item>/<location>/')
 def search(item, location):
@@ -181,9 +185,8 @@ def search(item, location):
 @route('/homepage/')
 def homepage():
   gumtreeResults = getGumtreeResults("", "FreecycleEdinburgh")
-  randomResults = shuffle(gumtreeResults)
-  print randomResults
-  randomResults = randomResults[:6]
+  randomResults = gumtreeResults[:6]
   return json.dumps(randomResults)
 
-run(host='', port=8080)
+#run(host='', port=8080)
+
