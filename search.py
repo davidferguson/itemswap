@@ -180,10 +180,9 @@ def search(item, location):
 @route('/homepage')
 @route('/homepage/')
 def homepage():
-  freecycleResults = getFreecycleResults("", "FreecycleEdinburgh")
   gumtreeResults = getGumtreeResults("", "FreecycleEdinburgh")
-  results = sortResults(freecycleResults, gumtreeResults)
-  randomResults = shuffle(results)
+  randomResults = shuffle(gumtreeResults)
+  print randomResults
   randomResults = randomResults[:6]
   return json.dumps(randomResults)
 
