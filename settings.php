@@ -103,7 +103,7 @@
                 <div class="savedSearches">
 				<?php
 				$sql = "SELECT * FROM `searches` WHERE username = '".$_SESSION["username"]."'";
-				$result = mysqli_query($conn $sql);
+				$result = mysqli_query($conn, $sql);
 				while($row = mysqli_fetch_assoc($result) ) {
 				?>
                     <label class="desc" for="unsubscribe"><?php echo $row["keywords"]; ?></label>
