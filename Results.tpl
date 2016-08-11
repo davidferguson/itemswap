@@ -36,78 +36,72 @@
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <form action="search.php" method="post">
-                <input id="searchnav" type="search" placeholder="Search for items" name="search">
-                <input id="initSearchnav" type="submit" value="Search">
-                <select id="localeSetnav" name="location">
-                    <option value="United Kingdom" disabled selected>Select your location</option>
-                    <option value="renfrew">Renfrew Scotland (Scotland, United Kingdom)</option>
-                    <option value="AberdeenUK">Aberdeen (Scotland, United Kingdom)</option>
-                    <option value="AberdeenshireWestFreecycle">Aberdeenshire West, Upper Donside & Upper Deeside (Scotland, United Kingdom)</option>
-                    <option value="AirdrieUK">Airdrie (Scotland, United Kingdom)</option>
-                    <option value="ArbroathUK">Arbroath (Scotland, United Kingdom)</option>
-                    <option value="freecycleayr">Ayr (Scotland, United Kingdom)</option>
-                    <option value="BathgateFreecycle">Bathgate (Scotland, United Kingdom)</option>
-                    <option value="BerwickshireUK">Berwickshire (Scotland, United Kingdom)</option>
-                    <option value="freecyclefifecentral">Central Fife (Scotland, United Kingdom)</option>
-                    <option value="freecycleclacks">Clackmannanshire (Scotland, United Kingdom)</option>
-                    <option value="cumbernauld-freecycle">Cumbernauld (Scotland, United Kingdom)</option>
-                    <option value="Dumbarton">Dumbarton (Scotland, United Kingdom)</option>
-                    <option value="Dumfries-GallowayFreecycle">Dumfries & Galloway (Scotland, United Kingdom)</option>
-                    <option value="freecycledundee">Dundee (Scotland, United Kingdom)</option>
-                    <option value="DunoonUK">Dunoon (Scotland, United Kingdom)</option>
-                    <option value="edunbartonfreecycle">East Dunbartonshire (Scotland, United Kingdom)</option>
-                    <option value="EastFifeUK">East Fife (Scotland, United Kingdom)</option>
-                    <option value="EastLothianUK">East Lothian (Scotland, United Kingdom)</option>
-                    <option value="Easter-RossFreecycle">Easter-Ross (Scotland, United Kingdom)</option>
-                    <option value="FreecycleEdinburgh">Edinburgh (Scotland, United Kingdom)</option>
-                    <option value="Ellon">Ellon (Scotland, United Kingdom)</option>
-                    <option value="FalkirkUK">Falkirk (Scotland, United Kingdom)</option>
-                    <option value="Galashiels_Freecycle">Galashiels / Selkirk (Scotland, United Kingdom)</option>
-                    <option value="GlasgowUK">Glasgow (Scotland, United Kingdom)</option>
-                    <option value="freecyclegrangemouth">Grangemouth (Scotland, United Kingdom)</option>
-                    <option value="GreenockUK">Greenock (Scotland, United Kingdom)</option>
-                    <option value="HamiltonLarkhall">Hamilton Larkhall (Scotland, United Kingdom)</option>
-                    <option value="helensburgh-freecycle">Helensburgh (Scotland, United Kingdom)</option>
-                    <option value="HuntlyUK">Huntly (Scotland, United Kingdom)</option>
-                    <option value="InvernessUK">Inverness and the Highland Region (Scotland, United Kingdom)</option>
-                    <option value="IrvineUK">Irvine (Scotland, United Kingdom)</option>
-                    <option value="IsleOfBute">Isle of Bute (Scotland, United Kingdom)</option>
-                    <option value="KilmarnockUK">Kilmarnock (Scotland, United Kingdom)</option>
-                    <option value="KintyreUK">Kintyre (Scotland, United Kingdom)</option>
-                    <option value="KirriemuirUK">Kirriemuir (Scotland, United Kingdom)</option>
-                    <option value="LanarkUK">Lanark (Scotland, United Kingdom)</option>
-                    <option value="freecyclelinlithgow">Linlithgow (Scotland, United Kingdom)</option>
-                    <option value="LivingstonUK">Livingston (Scotland, United Kingdom)</option>
-                    <option value="Freecycle-Midlothian">Midlothian (Scotland, United Kingdom)</option>
-                    <option value="montrose">Montrose (Scotland, United Kingdom)</option>
-                    <option value="morayfreecycle">Moray (Scotland, United Kingdom)</option>
-                    <option value="NorthwestSutherlandUK">Northwest Sutherland (Scotland, United Kingdom)</option>
-                    <option value="ObanNorthArgyllUK">Oban And North Argyll (Scotland, United Kingdom)</option>
-                    <option value="orkneyfreecycle_group">Orkney Islands (Scotland, United Kingdom)</option>
-                    <option value="paisley-freecycle">Paisley (Scotland, United Kingdom)</option>
-                    <option value="Peeblesshire_Freecycle">Peeblesshire (Scotland, United Kingdom)</option>
-                    <option value="PerthSouthUKFreecycle">Perth & Kinross (Scotland, United Kingdom)</option>
-                    <option value="RoxburghshireUK">Roxburghshire (Scotland, United Kingdom)</option>
-                    <option value="SaltcoatsUK">Saltcoats (Scotland, United Kingdom)</option>
-                    <option value="freecycleshetland">Shetland (Scotland, United Kingdom)</option>
-                    <option value="skyelochalshfreecycle">Skye & Lochalsh (Scotland, United Kingdom)</option>
-                    <option value="QueensferryUK">South Queensferry (Scotland, United Kingdom)</option>
-                    <option value="stirlingcityfreecycle">Stirling City (Scotland, United Kingdom)</option>
-                    <option value="WestFifeScotland">West Fife (Scotland, United Kingdom)</option>
-                    <option value="WesternIslesUK">Western Isles (Outer Hebrides) (Scotland, United Kingdom)</option>
-                    <option value="Wick">Wick (Scotland, United Kingdom)</option>
-                </select>
-                <!--<form class="navbar-form navbar-right" action="http://www.notifree.ml/Login.php" method="post">
-                    <div class="form-group">
-                        <input type="text" placeholder="Username" class="form-control" name="username">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control" name="password">
-                    </div>
-                    <button type="submit" class="btn btn-success">Sign in</button>
-                    <a href="Sign_up.html" class="btn btn-info" role="button">Sign up</a>
-                </form>-->
+                <div class="navbar-right" style="margin-top: 4px;">
+                                    <form action="http://www.notifree.ml/search.php" method="post">
+                                    <div class="form-group" style="float: left;">
+                                        <input id="searchnav" type="text" placeholder="Search for items" class="form-control" name="search">
+                                    </div>
+                                    <button id="" type="submit" class="btn btn-success" style="float: left;">Search</button>
+                                    <select id="localeSetnav" name="location">
+                                        <option value="United Kingdom" disabled="" selected="">Select your location</option>
+                                        <option value="renfrew">Renfrew Scotland (Scotland, United Kingdom)</option>
+                                        <option value="AberdeenUK">Aberdeen (Scotland, United Kingdom)</option>
+                                        <option value="AberdeenshireWestFreecycle">Aberdeenshire West, Upper Donside &amp; Upper Deeside (Scotland, United Kingdom)</option>
+                                        <option value="AirdrieUK">Airdrie (Scotland, United Kingdom)</option>
+                                        <option value="ArbroathUK">Arbroath (Scotland, United Kingdom)</option>
+                                        <option value="freecycleayr">Ayr (Scotland, United Kingdom)</option>
+                                        <option value="BathgateFreecycle">Bathgate (Scotland, United Kingdom)</option>
+                                        <option value="BerwickshireUK">Berwickshire (Scotland, United Kingdom)</option>
+                                        <option value="freecyclefifecentral">Central Fife (Scotland, United Kingdom)</option>
+                                        <option value="freecycleclacks">Clackmannanshire (Scotland, United Kingdom)</option>
+                                        <option value="cumbernauld-freecycle">Cumbernauld (Scotland, United Kingdom)</option>
+                                        <option value="Dumbarton">Dumbarton (Scotland, United Kingdom)</option>
+                                        <option value="Dumfries-GallowayFreecycle">Dumfries &amp; Galloway (Scotland, United Kingdom)</option>
+                                        <option value="freecycledundee">Dundee (Scotland, United Kingdom)</option>
+                                        <option value="DunoonUK">Dunoon (Scotland, United Kingdom)</option>
+                                        <option value="edunbartonfreecycle">East Dunbartonshire (Scotland, United Kingdom)</option>
+                                        <option value="EastFifeUK">East Fife (Scotland, United Kingdom)</option>
+                                        <option value="EastLothianUK">East Lothian (Scotland, United Kingdom)</option>
+                                        <option value="Easter-RossFreecycle">Easter-Ross (Scotland, United Kingdom)</option>
+                                        <option value="FreecycleEdinburgh">Edinburgh (Scotland, United Kingdom)</option>
+                                        <option value="Ellon">Ellon (Scotland, United Kingdom)</option>
+                                        <option value="FalkirkUK">Falkirk (Scotland, United Kingdom)</option>
+                                        <option value="Galashiels_Freecycle">Galashiels / Selkirk (Scotland, United Kingdom)</option>
+                                        <option value="GlasgowUK">Glasgow (Scotland, United Kingdom)</option>
+                                        <option value="freecyclegrangemouth">Grangemouth (Scotland, United Kingdom)</option>
+                                        <option value="GreenockUK">Greenock (Scotland, United Kingdom)</option>
+                                        <option value="HamiltonLarkhall">Hamilton Larkhall (Scotland, United Kingdom)</option>
+                                        <option value="helensburgh-freecycle">Helensburgh (Scotland, United Kingdom)</option>
+                                        <option value="HuntlyUK">Huntly (Scotland, United Kingdom)</option>
+                                        <option value="InvernessUK">Inverness and the Highland Region (Scotland, United Kingdom)</option>
+                                        <option value="IrvineUK">Irvine (Scotland, United Kingdom)</option>
+                                        <option value="IsleOfBute">Isle of Bute (Scotland, United Kingdom)</option>
+                                        <option value="KilmarnockUK">Kilmarnock (Scotland, United Kingdom)</option>
+                                        <option value="KintyreUK">Kintyre (Scotland, United Kingdom)</option>
+                                        <option value="KirriemuirUK">Kirriemuir (Scotland, United Kingdom)</option>
+                                        <option value="LanarkUK">Lanark (Scotland, United Kingdom)</option>
+                                        <option value="freecyclelinlithgow">Linlithgow (Scotland, United Kingdom)</option>
+                                        <option value="LivingstonUK">Livingston (Scotland, United Kingdom)</option>
+                                        <option value="Freecycle-Midlothian">Midlothian (Scotland, United Kingdom)</option>
+                                        <option value="montrose">Montrose (Scotland, United Kingdom)</option>
+                                        <option value="morayfreecycle">Moray (Scotland, United Kingdom)</option>
+                                        <option value="NorthwestSutherlandUK">Northwest Sutherland (Scotland, United Kingdom)</option>
+                                        <option value="ObanNorthArgyllUK">Oban And North Argyll (Scotland, United Kingdom)</option>
+                                        <option value="orkneyfreecycle_group">Orkney Islands (Scotland, United Kingdom)</option>
+                                        <option value="paisley-freecycle">Paisley (Scotland, United Kingdom)</option>
+                                        <option value="Peeblesshire_Freecycle">Peeblesshire (Scotland, United Kingdom)</option>
+                                        <option value="PerthSouthUKFreecycle">Perth &amp; Kinross (Scotland, United Kingdom)</option>
+                                        <option value="RoxburghshireUK">Roxburghshire (Scotland, United Kingdom)</option>
+                                        <option value="SaltcoatsUK">Saltcoats (Scotland, United Kingdom)</option>
+                                        <option value="freecycleshetland">Shetland (Scotland, United Kingdom)</option>
+                                        <option value="skyelochalshfreecycle">Skye &amp; Lochalsh (Scotland, United Kingdom)</option>
+                                        <option value="QueensferryUK">South Queensferry (Scotland, United Kingdom)</option>
+                                        <option value="stirlingcityfreecycle">Stirling City (Scotland, United Kingdom)</option>
+                                        <option value="WestFifeScotland">West Fife (Scotland, United Kingdom)</option>
+                                        <option value="WesternIslesUK">Western Isles (Outer Hebrides) (Scotland, United Kingdom)</option>
+                                        <option value="Wick">Wick (Scotland, United Kingdom)</option>
+                                    </select>
+                                </form></div>
             </div>
         </div>
     </nav>
