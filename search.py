@@ -121,7 +121,7 @@ def parseGumtreeDate(dateString):
     return 0
   if dateArray[2] != "ago":
     return 0
-  if dateArray[1] == "minute" or dateArray[1] == "minutes":
+  if dateArray[1] == "minute" or dateArray[1] == "minutes" or dateArray[1] == "mins":
     minutesToSubtract = int(dateArray[0])
     postDate = (datetime.datetime.now() - datetime.timedelta(minutes=minutesToSubtract))
   if dateArray[1] == "hour" or dateArray[1] == "hours":
