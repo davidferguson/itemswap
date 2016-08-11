@@ -176,30 +176,31 @@
         window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')
     </script>
     <script>
+        
         var request = new XMLHttpRequest();
         request.onreadystatechange = function() {
           if (request.readyState == 4 && request.status == 200) {
             var data = JSON.parse(request.responseText);
             document.getElementById("img1").src = data[0].image;
-            document.getElementById("img1").parentElement.hred = data[0].url;
+            document.getElementById("img1").parentElement.href = data[0].url;
             document.getElementById("img2").src = data[1].image;
-            document.getElementById("img2").parentElement.hred = data[1].url;
+            document.getElementById("img2").parentElement.href = data[1].url;
             document.getElementById("img3").src = data[2].image;
-            document.getElementById("img3").parentElement.hred = data[2].url;
+            document.getElementById("img3").parentElement.href = data[2].url;
             document.getElementById("img4").src = data[3].image;
-            document.getElementById("img4").parentElement.hred = data[3].url;
+            document.getElementById("img4").parentElement.href = data[3].url;
             document.getElementById("img5").src = data[4].image;
-            document.getElementById("img5").parentElement.hred = data[4].url;
+            document.getElementById("img5").parentElement.href = data[4].url;
             document.getElementById("img6").src = data[5].image;
-            document.getElementById("img6").parentElement.hred = data[5].url;
+            document.getElementById("img6").parentElement.href = data[5].url;
             document.getElementById("img1-1").src = data[0].image;
-            document.getElementById("img1-1").parentElement.hred = data[0].url;
+            document.getElementById("img1-1").parentElement.href = data[0].url;
             document.getElementById("img1-2").src = data[1].image;
-            document.getElementById("img1-2").parentElement.hred = data[1].url;
+            document.getElementById("img1-2").parentElement.href = data[1].url;
             document.getElementById("img1-3").src = data[2].image;
-            document.getElementById("img1-3").parentElement.hred = data[2].url;
+            document.getElementById("img1-3").parentElement.href = data[2].url;
             document.getElementById("img1-4").src = data[3].image;
-            document.getElementById("img1-4").parentElement.hred = data[3].url;
+            document.getElementById("img1-4").parentElement.href = data[3].url;
           }
         };
         request.open("GET", "http://www.notifree.ml:8080/homepage/", true);
