@@ -59,6 +59,7 @@ input:focus {
 }
 .first {
   width:350px;
+  height:248px;
  -webkit-animation: bannermove 15s linear infinite;
     -moz-animation: bannermove 15s linear infinite;
      -ms-animation: bannermove 15s linear infinite;
@@ -114,6 +115,7 @@ input:focus {
 }
 .img {
   width:350px;
+  height:248px;
 }
 /*end of main Page*/
 /*=========================================================================================================*/
