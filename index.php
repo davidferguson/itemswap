@@ -142,6 +142,9 @@
                 ?>
                 <input type="checkbox" id="savesearch">
                 <label id="boxLab" for="savesearch">:Save this search</label>
+                <?php
+                  }
+                ?>
             </form>
         </div>
     </div>
