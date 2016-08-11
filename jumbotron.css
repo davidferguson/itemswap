@@ -220,6 +220,7 @@ input:focus {
   border-radius:50px;
   border:2px #888888 solid;
   padding-top:50px;
+  padding-bottom:50px;
   color:#000000;
  }
  .searchedWord:hover {
