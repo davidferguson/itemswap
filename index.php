@@ -203,7 +203,7 @@
             document.getElementById("img1-4").parentElement.href = data[3].url;
           }
         };
-        request.open("GET", "http://www.notifree.ml:8080/homepage/", true);
+        request.open("GET", "http://search.notifree.ml/homepage/", true);
         request.send();
     </script>
     <script src="js/bootstrap.min.js"></script>
