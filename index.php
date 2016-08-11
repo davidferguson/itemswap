@@ -154,16 +154,16 @@
     <div id="gallery">
         <div id="container">
             <div class="photobanner">
-                <img class="first" src="ntfr-logo.png" alt="" />
-                <img class="img" src="ntfr-logo.png" alt="" />
-                <img class="img" src="ntfr-logo.png" alt="" />
-                <img class="img" src="ntfr-logo.png" alt="" />
-                <img class="img" src="ntfr-logo.png" alt="" />
-                <img class="img" src="ntfr-logo.png" alt="" />
-                <img class="img" src="ntfr-logo.png" alt="" />
-                <img class="img" src="ntfr-logo.png" alt="" />
-                <img class="img" src="ntfr-logo.png" alt="" />
-                <img class="img" src="ntfr-logo.png" alt="" />
+                <img id="img1" class="first" src="ntfr-logo.png" alt="" />
+                <img id="img2" class="img" src="ntfr-logo.png" alt="" />
+                <img id="img3" class="img" src="ntfr-logo.png" alt="" />
+                <img id="img4" class="img" src="ntfr-logo.png" alt="" />
+                <img id="img5" class="img" src="ntfr-logo.png" alt="" />
+                <img id="img6" class="img" src="ntfr-logo.png" alt="" />
+                <img id="img1-1" class="img" src="ntfr-logo.png" alt="" />
+                <img id="img1-2" class="img" src="ntfr-logo.png" alt="" />
+                <img id="img1-3" class="img" src="ntfr-logo.png" alt="" />
+                <img id="img1-4" class="img" src="ntfr-logo.png" alt="" />
             </div>
             <!--Goes from 1-6 then back to 1-->
         </div>
