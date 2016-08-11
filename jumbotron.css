@@ -212,7 +212,7 @@ input:focus {
 }
 .searchedItem {
   background:#444444;
-  background:-webkit-linear-gradient(to bottom right, #444444, #999999);
+  background:-webkit-linear-gradient(to bottom right, #888888, #cccccc);
   background:-moz-linear-gradient(to bottom right, #444444, #999999);
   background:-o-linear-gradient(to bottom right, #444444, #999999);
   background:linear-gradient(to bottom right, #444444, #999999);
