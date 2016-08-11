@@ -116,7 +116,7 @@
                     <?php
 				    } ?>
                 </div>
-                <input class="setting2" type="submit" />
+                <input class="setting2" type="submit" value="Change settings"/>
             </form>
         </div>
     </div>

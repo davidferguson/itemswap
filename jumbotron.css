@@ -199,6 +199,7 @@ input:focus {
   display:inline;
   float:left;
   border-radius:25px;
+  margin-top:25px;
 }
 .searchedWord {
   display:inline;
@@ -220,18 +221,16 @@ input:focus {
   border-right:inherit;
   border-radius:50px;
   border:2px #888888 solid;
-  padding-top:50px;
-  padding-bottom:50px;
-  color:#000000;
+  color:#ffffff;
  }
  .searchedWord:hover {
-   color:#333333;
+   color:#eeeeee;
  }
  .searchedDesc:hover {
-   color:#333333;
+   color:#eeeeee;
  }
  .searchedLoc:hover {
-   color:#333333;
+   color:#eeeeee;
  }
 /*end of results*/
 /*=========================================================================================================*/

@@ -150,7 +150,7 @@
     </div>
 
     <!-- scrolling gallery - to be implemented -->
-    <strong><h1 style="font-size:200%;text-align:center">Items you might want to consider...</h1></strong>
+    <strong><h1 style="font-size:200%;text-align:center;color:#ffffff">Items you might want to consider...</h1></strong>
     <div id="gallery">
         <div id="container">
             <div class="photobanner">
