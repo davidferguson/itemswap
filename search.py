@@ -3,39 +3,8 @@ from bs4 import BeautifulSoup
 from bottle import route, run, template
 import MySQLdb
 import datetime
-
-class dbConn(object):
-	conn = None
-	def connect(self):
-		self.conn = MySQLdb.connect('127.0.0.1', 'notifree', 'prewired2016', 'notifree')
-		self.conn.set_character_set('utf8')
-		self.conn.cursor().execute('SET NAMES utf8;')
-		self.conn.cursor().execute('SET CHARACTER SET utf8;')
-		self.conn.cursor().execute('SET character_set_connection=utf8;')
-	def execute(self, sql, values):
-		try:
-			cursor = self.conn.cursor()
-			cursor.execute(sql, values)
-			self.conn.commit()
-		except (AttributeError, MySQLdb.OperationalError):
-			self.connect()
-			cursor = self.conn.cursor()
-			cursor.execute(sql, values)
-			self.conn.commit()
-		return cursor
-	def select(self, sql):
-		try:
-			cursor = self.conn.cursor(MySQLdb.cursors.DictCursor)
-			cursor.execute(sql)
-			result = cursor.fetchall()
-			self.conn.commit()
-		except (AttributeError, MySQLdb.OperationalError):
-			self.connect()
-			cursor = self.conn.cursor(MySQLdb.cursors.DictCursor)
-			cursor.execute(sql)
-			result = cursor.fetchall()
-			self.conn.commit()
-		return result
+from random import shuffle
+import json
 
 locations = [
   ["renfrew","Renfrew Scotland"],
@@ -208,6 +177,14 @@ def hello(item, location):
   reversedResults = list(reversed(results))
   return template('Results', items=reversedResults)
 
-dbconnection = dbConn()
-run(host='', port=8080)
+@route('/homepage')
+@route('/homepage/')
+def hello(item, location):
+  freecycleResults = getFreecycleResults("", "FreecycleEdinburgh")
+  gumtreeResults = getGumtreeResults("", "FreecycleEdinburgh")
+  results = sortResults(freecycleResults, gumtreeResults)
+  randomResults = shuffle(results)
+  randomResults = randomResults[:6]
+  return json.dumps(randomResults)
 
+run(host='', port=8080)
