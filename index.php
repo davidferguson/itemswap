@@ -140,8 +140,8 @@
                     session_start();
                     if( isset($_SESSION["username"] ) ) {
                 ?>
-                <input type="checkbox" id="savesearch">
-                <label name="savesearch" id="boxLab" for="savesearch">:Save this search</label>
+                <input name="savesearch" type="checkbox" id="savesearch">
+                <label id="boxLab" for="savesearch">:Save this search</label>
                 <?php
                   }
                 ?>
