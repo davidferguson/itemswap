@@ -113,8 +113,8 @@
 					$result = mysqli_query($conn, $sql);
 					while($row = mysqli_fetch_assoc($result) ) {
 				?>
-				<tr style="margin-top: 10px;">
-			                <td>
+				<tr style="border-top: 10px solid transparent;">
+			                <td style="padding-right:10px;">
 			                	<label class="desc" for="unsubscribe"><?php echo $row["keywords"]; ?></label>	
 			                </td>
 			                <td>
