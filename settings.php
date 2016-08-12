@@ -93,30 +93,36 @@
         <div id="rwall2" onLoad="right()"></div>
         <div class="container">
             <strong><h1 id="heading" style="font-size:300%">Account Settings</h1></strong>
-            <form action="updatesettings.php" method="post">
-                <label class="setLab" for="changeMail" optional>Change your email:</label>
-                <input class="setting" id="changeMail" type="email" name="email" />
-                <br>
-                <label class="setLab" for="hoEm" optional>Minimum time between notifications (hours):</label>
-                <input class="setting" id="hoEm" type="number" min="0" max="24" />
-                <br>
-                <div class="savedSearches">
-				<?php
+                <p>
+	            <form action="updatesettings.php" method="post">
+	                <label class="setLab" for="changeMail" optional>Change your email:</label>
+	                <input class="setting" id="changeMail" type="email" name="email" />
+	                <br>
+	                <label class="setLab" for="hoEm" optional>Minimum time between notifications (hours):</label>
+	                <input class="setting" id="hoEm" type="number" min="0" max="24" />
+	                <br>
+	                <input class="setting2" type="submit" value="Change settings"/>
+	            </form>
+	        </p>
+	        <p>
+	            <div class="savedSearches">
+	            	<h3>Saved Searches</h3>
+			<?php
 				$sql = "SELECT * FROM `searches` WHERE username = '".$_SESSION["username"]."'";
 				$result = mysqli_query($conn, $sql);
 				while($row = mysqli_fetch_assoc($result) ) {
-				?>
-                    <label class="desc" for="unsubscribe"><?php echo $row["keywords"]; ?></label>
-                    <a href="removesave.php?id=<?php echo $row["id"]?>">
-					  <button type="button" class="btn btn-danger">
-						<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-					  </button>
-					</a>
-                    <br>
-                    <?php
-				    } ?>
-                </div>
-                <input class="setting2" type="submit" value="Change settings"/>
+			?>
+	                <label class="desc" for="unsubscribe"><?php echo $row["keywords"]; ?></label>
+	                <a href="removesave.php?id=<?php echo $row["id"]?>">
+				<button type="button" class="btn btn-danger">
+					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+				</button>
+			</a>
+	                <?php
+				}
+			?>
+	            </div>
+	        </p>
             </form>
         </div>
     </div>
