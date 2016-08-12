@@ -39,6 +39,9 @@ input:focus {
 #mainTitle {
   display:inline;
 }
+#mainTitle:hover {
+  color:#9d9d9d;
+}
 #mainLogo {
   width:75px;
   display:inline;
