@@ -233,7 +233,7 @@ input:focus {
  }
  .searchedWord:hover {
    color:#eeeeee;
-   text-decoration-color:#ffffff;
+   text-decoration:underline;
  }
  .searchedDesc:hover {
    color:#eeeeee;
