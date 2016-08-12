@@ -233,12 +233,15 @@ input:focus {
  }
  .searchedWord:hover {
    color:#eeeeee;
+   text-decoration-color:#ffffff;
  }
  .searchedDesc:hover {
    color:#eeeeee;
+   text-decoration:none;
  }
  .searchedLoc:hover {
    color:#eeeeee;
+   text-decoration:none;
  }
 /*end of results*/
 /*=========================================================================================================*/
