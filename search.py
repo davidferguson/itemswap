@@ -154,10 +154,10 @@ def getGumtreeResults(searchItem, searchLocation):
       except:
         itemImage = item.find_all("img")[0]["data-lazy"]
       itemTitle = item.find_all("h2")[0].text.strip()
-      if "wanted" in itemTitle.lower() or "selling" in itemTitle.lower() or "offer" in itemTitle.lower() or "swap" in itemTitle.lower():
+      if "wanted" in itemTitle.lower() or "selling" in itemTitle.lower() or "offer" in itemTitle.lower() or "swap" in itemTitle.lower() or "price" in itemTitle.lower():
         continue
       itemDescription = item.find_all("p")[0].text.strip() + "..."
-      if "wanted" in itemDescription.lower() or "selling" in itemDescription.lower() or "offer" in itemDescription.lower() or "swap" in itemDescription.lower():
+      if "wanted" in itemDescription.lower() or "selling" in itemDescription.lower() or "offer" in itemDescription.lower() or "swap" in itemDescription.lower() or "price" in itemDescription.lower():
         continue
       itemLocation = item.findAll("div", { "class" : "listing-location" })[0].text.strip()
       itemLink = "http://gumtree.com" + item.find_all("a")[0]["href"]
