@@ -141,7 +141,7 @@
                     if( isset($_SESSION["username"] ) ) {
                 ?>
                 <input name="savesearch" type="checkbox" id="savesearch">
-                <label id="boxLab" for="savesearch">:Save this search</label>
+                <label id="boxLab" for="savesearch">Save this search</label>
                 <?php
                   }
                 ?>
