@@ -41,7 +41,8 @@
                                     <div class="form-group" style="float: left;">
                                         <input id="searchnav" type="text" placeholder="Search for items" class="form-control" name="search">
                                     </div>
-                                    <button id="" type="submit" class="btn btn-success" style="float: left;">Search</button>
+                                    <button id="initSearchnav" type="submit" class="btn btn-success" style="float:left;margin:0px;">Search</button>
+                                    <br>
                                     <select id="localeSetnav" name="location">
                                         <option value="United Kingdom" disabled="" selected="">Select your location</option>
                                         <option value="renfrew">Renfrew Scotland (Scotland, United Kingdom)</option>
