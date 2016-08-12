@@ -107,13 +107,13 @@
 	        <p>
 	            <div class="savedSearches">
 	            	<h3>Saved Searches</h3>
-	            	<table>
+	            	<table style="margin-left:auto; margin-right:auto;">
 				<?php
 					$sql = "SELECT * FROM `searches` WHERE username = '".$_SESSION["username"]."'";
 					$result = mysqli_query($conn, $sql);
 					while($row = mysqli_fetch_assoc($result) ) {
 				?>
-				<tr>
+				<tr style="margin-top: 10px;">
 			                <td>
 			                	<label class="desc" for="unsubscribe"><?php echo $row["keywords"]; ?></label>	
 			                </td>
