@@ -120,6 +120,10 @@ input:focus {
   width:350px;
   height:248px;
 }
+
+#savesearch {
+  margin-left: 60px;
+}
 /*end of main Page*/
 /*=========================================================================================================*/
 #mainContent2 {
