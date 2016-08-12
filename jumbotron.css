@@ -175,11 +175,12 @@ input:focus {
 }
 #searchnav {
   border-radius:20px;
-  font-size:10%;
+  font-size:180%;
 }
 #initSearchnav {
   border-radius:20px;
   font-size:80%;
+  margin:0px;
 }
 #localeSetnav {
   font-size:60%;
