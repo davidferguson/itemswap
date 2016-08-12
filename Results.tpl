@@ -113,7 +113,7 @@
         <div id="rwall"></div>
         <h1 style="font-size:200%;text-align:center">Results Page</h1>
         % for item in items:
-            <a href="{{item["url"]}}">
+            <a href="{{item["url"]}}" style="text-decoration:none;">
                 <div class="searchedItem">
                     <img class="searchedImg" src="{{item["image"]}}"/>
                     <h1 class="searchedWord">{{item["title"]}}</h1>
