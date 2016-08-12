@@ -292,3 +292,7 @@ input:focus {
   background-color:#222222;
   border-bottom-right-radius:50px;
 }
+.savedSearches {
+  margin-top: 50px;
+}
+}
