@@ -60,7 +60,7 @@
                         <a href="settings.php">
                             <div id="logo"><img src="ntfr-settingssymbol.png" id="setLogo" /></div>
                         </a>
-                        <span class="navbar-brand" href="index.php" id="mainTitle">Welcome <?php echo $_SESSION["username"]; ?></span>
+                        <span class="navbar-brand" href="index.php" id="welcomeTitle">Welcome <?php echo $_SESSION["username"]; ?></span>
                         <a href="Sign_Out.php" class="btn btn-info" role="button" style="margin-top:8px;">Sign Out</a>
                     </div>
                 <?php
