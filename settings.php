@@ -107,20 +107,28 @@
 	        <p>
 	            <div class="savedSearches">
 	            	<h3>Saved Searches</h3>
-			<?php
-				$sql = "SELECT * FROM `searches` WHERE username = '".$_SESSION["username"]."'";
-				$result = mysqli_query($conn, $sql);
-				while($row = mysqli_fetch_assoc($result) ) {
-			?>
-	                <label class="desc" for="unsubscribe"><?php echo $row["keywords"]; ?></label>
-	                <a href="removesave.php?id=<?php echo $row["id"]?>">
-				<button type="button" class="btn btn-danger">
-					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-				</button>
-			</a>
-	                <?php
-				}
-			?>
+	            	<table>
+				<?php
+					$sql = "SELECT * FROM `searches` WHERE username = '".$_SESSION["username"]."'";
+					$result = mysqli_query($conn, $sql);
+					while($row = mysqli_fetch_assoc($result) ) {
+				?>
+				<tr>
+			                <td>
+			                	<label class="desc" for="unsubscribe"><?php echo $row["keywords"]; ?></label>	
+			                </td>
+			                <td>
+				                <a href="removesave.php?id=<?php echo $row["id"]?>">
+							<button type="button" class="btn btn-danger">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+							</button>
+						</a>
+					</td>
+				</tr>
+		                <?php
+					}
+				?>
+			</table>
 	            </div>
 	        </p>
             </form>
