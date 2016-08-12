@@ -174,8 +174,8 @@ input:focus {
   margin-top:15px;
 }
 #searchnav {
-  /*border-radius:20px;*/
-  font-size:180%;
+  border-radius:20px;
+  /*font-size:180%;*/
 }
 #initSearchnav {
   border-radius:20px;
