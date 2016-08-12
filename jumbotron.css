@@ -243,6 +243,9 @@ input:focus {
    color:#eeeeee;
    text-decoration:none;
  }
+ .searchedItem {
+  text-decoration:none;
+ }
 /*end of results*/
 /*=========================================================================================================*/
 #mainContent4 {
