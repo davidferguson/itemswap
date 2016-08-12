@@ -243,7 +243,7 @@ input:focus {
    color:#eeeeee;
    text-decoration:none;
  }
- .searchedItem {
+ .searchedItem:hover {
   text-decoration:none;
  }
 /*end of results*/
