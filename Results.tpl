@@ -38,7 +38,7 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="navbar-right" style="margin-top: 4px;">
                                     <form action="http://www.notifree.ml/search.php" method="post">
-                                    <div class="form-group" style="float:left;margin:0px;font-size:100px;">
+                                    <div class="form-group" style="float:left;margin:0px;font-size:20px;">
                                         <input id="searchnav" type="text" placeholder="Search for items" class="form-control" name="search">
                                     </div>
                                     <button id="initSearchnav" type="submit" class="btn btn-success" style="float:left;margin:0px;">Search</button>
